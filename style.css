@@ -4,6 +4,7 @@
   box-sizing: border-box;
   word-break: keep-all;
   --greenColor: #244655;
+  font-family: 'IBMPlexSansKR-Regular';
 }
 a{text-decoration: none;}
 li{list-style: none;}
@@ -41,21 +42,29 @@ header div#headWrap #titWrap{
   height: 90%;
   padding: 0 15px;
   font-size: 1.8rem;
-  font-family: 'SuseongDotum';
   color: var(--greenColor);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
+  font-family: 'SuseongDotum';
 }
 
 header nav#navBtm{
   height: 180px;
   background: #f9f9f9;
-  padding: 50px 10px;
+  padding: 0 10px;
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 40px;
+}
+
+header nav#navBtm #navBtmTxt div{
+  font-weight: bold;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  font-family: 'SuseongDotum';
 }
 
 header nav#navBtm ul {
@@ -72,10 +81,7 @@ header nav#navBtm ul i {
   margin-bottom: 10px;
 }
 
-@font-face {
-  font-family: 'SuseongDotum';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/SuseongDotum.woff2') format('woff2');
-}
+
 
 @media screen and (min-width:500px){
   header div#headWrap #titWrap{
@@ -91,4 +97,14 @@ header nav#navBtm ul i {
   header div#headWrap #titWrap h1:last-child{
     margin-left: 70px;
   }
+}
+
+@font-face {
+  font-family: 'SuseongDotum';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/SuseongDotum.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'IBMPlexSansKR-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');
 }
