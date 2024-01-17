@@ -1,0 +1,91 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  word-break: keep-all;
+  --greenColor: #244655;
+}
+a{text-decoration: none;}
+li{list-style: none;}
+
+header{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header div#headWrap{
+  flex: 1;
+  background: lightgrey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header div#headWrap nav#navTopWrap {
+  align-self: flex-start;
+  width: 100%;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+}
+
+header div#headWrap nav#navTopWrap button{
+  background: none;
+  padding: 5px 10px;
+}
+
+header div#headWrap #titWrap{
+  height: 90%;
+  padding: 0 15px;
+  font-size: 1.8rem;
+  font-family: 'SuseongDotum';
+  color: var(--greenColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+header nav#navBtm{
+  height: 180px;
+  background: #f9f9f9;
+  padding: 50px 10px;
+}
+
+header nav#navBtm ul {
+  max-width: 800px;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+header nav#navBtm ul i {
+  font-size: 2em;
+  color: var(--greenColor);
+  margin-bottom: 10px;
+}
+
+@font-face {
+  font-family: 'SuseongDotum';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/SuseongDotum.woff2') format('woff2');
+}
+
+@media screen and (min-width:500px){
+  header div#headWrap #titWrap{
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width:750px) {
+  header div#headWrap #titWrap{
+    font-size: 3rem;
+  }
+
+  header div#headWrap #titWrap h1:last-child{
+    margin-left: 70px;
+  }
+}
