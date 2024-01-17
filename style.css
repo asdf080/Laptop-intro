@@ -47,6 +47,8 @@ header div#headWrap #titWrap{
   flex-direction: column;
   justify-content: center;
   align-items: start;
+}
+header div#headWrap #titWrap h1{
   font-family: 'SuseongDotum';
 }
 
