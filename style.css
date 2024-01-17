@@ -53,13 +53,16 @@ header nav#navBtm{
   height: 180px;
   background: #f9f9f9;
   padding: 50px 10px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
 }
 
 header nav#navBtm ul {
   max-width: 800px;
   display: flex;
   text-align: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   font-size: 20px;
 }
 
