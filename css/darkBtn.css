@@ -1,10 +1,10 @@
-:root {
+#navTopWrap {
   --bg-planet-bright: #F2C94C;
   --bg-planet-shadow: #828894;
   --bg-planet-lightshadow: #D7D7D820;
   --dot-size: 0.25rem;
 }
-  :root.bg-dark {
+.bg-dark {
     --bg-color: #2C3144;
   }
 

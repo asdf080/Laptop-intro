@@ -86,7 +86,40 @@ header nav#navBtm ul i {
   margin-bottom: 10px;
 }
 
+section{
+  margin: 0 auto;
+  padding: 50px 10px;
+  max-width: 1200px;
+}
 
+/* 첫번째 섹션 */
+
+section#bubble .bubbleLine{
+  height: 3px;
+  background: lightgray;
+  position: relative;
+}
+
+section#bubble .bubbleLine img{
+  position: absolute;
+  background-color: white;
+  top: -10px;
+}
+section#bubble .bubbleLine:last-child img{
+  position: absolute;
+  background-color: white;
+  top: -10px;
+  right: 0;
+}
+
+section#bubble #bubbleContent{
+  padding: 60px 0;
+}
+
+section#bubble #bubbleContent img{
+  max-width: 100%;
+  height: auto;
+}
 
 @media screen and (min-width:500px){
   header div#headWrap #titWrap{
