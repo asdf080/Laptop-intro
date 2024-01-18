@@ -3,8 +3,8 @@
   padding: 0;
   box-sizing: border-box;
   word-break: keep-all;
-  --greenColor: #244655;
   font-family: 'IBMPlexSansKR-Regular';
+  --greenColor: #244655;
 }
 a{text-decoration: none;}
 li{list-style: none;}
@@ -17,7 +17,7 @@ header{
 
 header div#headWrap{
   flex: 1;
-  background: lightgrey;
+  background: lightyellow;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -62,6 +62,9 @@ header nav#navBtm{
   gap: 40px;
 }
 
+header nav#navBtm #navBtmTxt{
+  display: none;
+}
 header nav#navBtm #navBtmTxt div{
   font-weight: bold;
   font-size: 1.8em;
@@ -70,15 +73,15 @@ header nav#navBtm #navBtmTxt div{
 }
 
 header nav#navBtm ul {
+  width: 100%;
   max-width: 800px;
   display: flex;
+  justify-content: space-around;
   text-align: center;
-  /* justify-content: space-between; */
-  font-size: 20px;
 }
 
 header nav#navBtm ul i {
-  font-size: 2em;
+  font-size: 36px;
   color: var(--greenColor);
   margin-bottom: 10px;
 }
@@ -89,6 +92,9 @@ header nav#navBtm ul i {
   header div#headWrap #titWrap{
     font-size: 2rem;
   }
+  header nav#navBtm ul i{
+    font-size: 40px;
+  }
 }
 
 @media screen and (min-width:750px) {
@@ -98,6 +104,14 @@ header nav#navBtm ul i {
 
   header div#headWrap #titWrap h1:last-child{
     margin-left: 70px;
+  }
+
+  header nav#navBtm #navBtmTxt{
+    display: block;
+  }
+
+  header nav#navBtm ul div {
+    font-size: 20px;
   }
 }
 
