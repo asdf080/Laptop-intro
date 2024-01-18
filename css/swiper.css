@@ -58,3 +58,13 @@
 .swiper-slide:nth-child(5n) {
   background-color: lightblue;
 }
+
+.swiper-slide {
+  display: flex;
+}
+
+.swiper-slide .swipeImgWrap{
+  width: 50%;
+  height: 100%;
+  background: white;
+}
