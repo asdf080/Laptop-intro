@@ -1,28 +1,32 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   word-break: keep-all;
-  font-family: 'IBMPlexSansKR-Regular';
+  font-family: "IBMPlexSansKR-Regular";
   --greenColor: #244655;
 }
-a{text-decoration: none;}
-li{list-style: none;}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
 
-header{
+header {
   height: 100vh;
   display: flex;
   flex-direction: column;
   user-select: none;
 }
 
-header div#headWrap{
+header div#headWrap {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: no-repeat center url('../img/headLg.png');
+  background: no-repeat center url("../img/headLg.png");
   background-size: cover;
 }
 
@@ -35,12 +39,12 @@ header div#headWrap nav#navTopWrap {
   gap: 30px;
 }
 
-header div#headWrap nav#navTopWrap button{
+header div#headWrap nav#navTopWrap button {
   background: none;
   padding: 5px 10px;
 }
 
-header div#headWrap #titWrap{
+header div#headWrap #titWrap {
   height: 90%;
   padding: 0 15px;
   font-size: 1.8rem;
@@ -50,11 +54,11 @@ header div#headWrap #titWrap{
   justify-content: center;
   align-items: start;
 }
-header div#headWrap #titWrap h1{
-  font-family: 'SuseongDotum';
+header div#headWrap #titWrap h1 {
+  font-family: "SuseongDotum";
 }
 
-header nav#navBtm{
+header nav#navBtm {
   height: 160px;
   background: #f9f9f9;
   padding: 0 10px;
@@ -64,14 +68,14 @@ header nav#navBtm{
   gap: 40px;
 }
 
-header nav#navBtm #navBtmTxt{
+header nav#navBtm #navBtmTxt {
   display: none;
 }
-header nav#navBtm #navBtmTxt div{
+header nav#navBtm #navBtmTxt div {
   font-weight: bold;
   font-size: 1.8em;
   margin-bottom: 10px;
-  font-family: 'SuseongDotum';
+  font-family: "SuseongDotum";
 }
 
 header nav#navBtm ul {
@@ -82,7 +86,7 @@ header nav#navBtm ul {
   text-align: center;
 }
 
-header nav#navBtm ul li:hover{
+header nav#navBtm ul li:hover {
   cursor: pointer;
   font-weight: bold;
 }
@@ -92,13 +96,13 @@ header nav#navBtm ul i {
   margin-bottom: 10px;
 }
 
-section{
+section {
   margin: 0 auto;
   padding: 60px 10px;
   max-width: 1100px;
 }
 
-section h2.secTit{
+section h2.secTit {
   text-align: center;
   font-size: 60px;
 }
@@ -109,79 +113,122 @@ section h3 {
 }
 
 /* 첫번째 섹션 */
-section#bubble .bubbleLine{
+section#bubble .bubbleLine {
   height: 3px;
   background: lightgray;
   position: relative;
 }
 
-section#bubble .bubbleLine img{
+section#bubble .bubbleLine img {
   position: absolute;
   background-color: white;
   top: -10px;
 }
-section#bubble .bubbleLine:last-child img{
+section#bubble .bubbleLine:last-child img {
   position: absolute;
   background-color: white;
   top: -10px;
   right: 0;
 }
 
-section#bubble #bubbleContent{
+section#bubble #bubbleContent {
   padding: 30px 0;
 }
 
-section#bubble #bubbleContent div:last-child{
+section#bubble #bubbleContent div:last-child {
   text-align: right;
 }
 
-section#bubble #bubbleContent img{
+section#bubble #bubbleContent img {
   max-width: 90%;
   margin-top: 30px;
   height: auto;
 }
 
-/* 두번째 섹션 */
+/* 세번째 섹션 */
+section#popGoods h4 {
+  text-align: center;
+  margin-bottom: 80px;
+  color: #aaa;
+}
 
-@media screen and (min-width:500px){
-  header div#headWrap #titWrap{
+section#popGoods article {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, minmax(250px, auto));
+  gap: 10px 5px;
+}
+
+section#popGoods article #lastGrid {
+  grid-column: 1 / 3;
+}
+
+section#popGoods div {
+  text-align: center;
+}
+
+section#popGoods article > div {
+  border-radius: 20px;
+  padding: 20px 0;
+}
+
+@media screen and (min-width: 500px) {
+  header div#headWrap #titWrap {
     font-size: 2rem;
   }
-  header nav#navBtm ul i{
+  header nav#navBtm ul i {
     font-size: 40px;
   }
 }
 
-@media screen and (min-width:750px) {
-  header div#headWrap #titWrap{
+@media screen and (min-width: 750px) {
+  header div#headWrap #titWrap {
     font-size: 3rem;
   }
 
-  header div#headWrap #titWrap h1:last-child{
+  header div#headWrap #titWrap h1:last-child {
     margin-left: 70px;
   }
 
   header nav#navBtm ul div {
     font-size: 20px;
   }
-  section{
+  section {
     margin: 0 auto;
     padding: 80px 10px;
   }
 }
 
-@media screen and (min-width:1030px) {
-  header nav#navBtm #navBtmTxt{
+@media screen and (min-width: 900px) {
+  section#popGoods article {
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: repeat(2, minmax(300px, auto));
+    gap: 10px 20px;
+  }
+
+  section#popGoods article #thirdGrid {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  section#popGoods article #lastGrid {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+  }
+}
+
+@media screen and (min-width: 1030px) {
+  header nav#navBtm #navBtmTxt {
     display: block;
   }
 }
 
 @font-face {
-  font-family: 'SuseongDotum';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/SuseongDotum.woff2') format('woff2');
+  font-family: "SuseongDotum";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/SuseongDotum.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: 'IBMPlexSansKR-Regular';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');
+  font-family: "IBMPlexSansKR-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff") format("woff");
 }

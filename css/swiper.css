@@ -1,4 +1,4 @@
-#swiperContain{
+#swiperContain {
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -9,13 +9,13 @@
   height: 600px;
 }
 
-@media screen and (max-width:800px){
-  #swiperContain{
+@media screen and (max-width: 800px) {
+  #swiperContain {
     display: block;
   }
 
   .swiper {
-    margin-left:80px;
+    margin-left: 80px;
   }
 }
 
@@ -29,7 +29,7 @@
   padding: 50px;
 }
 
-.swiper-slide-fully-visible{
+.swiper-slide-fully-visible {
   background-color: #eee !important;
 }
 
@@ -59,7 +59,7 @@
   justify-content: space-between;
 }
 
-.swiper-slide .swipeImgWrap{
+.swiper-slide .swipeImgWrap {
   width: 50%;
   min-width: 328px;
   height: 100%;
@@ -69,14 +69,14 @@
   overflow: hidden;
 }
 
-.swiper-slide .swipeImgWrap img{
+.swiper-slide .swipeImgWrap img {
   width: 100%;
   height: auto;
-  object-fit: cover; 
-  object-position: center; 
+  object-fit: cover;
+  object-position: center;
 }
 
-.swiper-slide .swipeTxtWrap{
+.swiper-slide .swipeTxtWrap {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -84,34 +84,48 @@
   height: 100%;
   width: 330px;
   margin-left: 20px;
+  padding: 0 20px;
 }
 
-.swiper-slide .swipeTxtWrap strong{
+.swiper-slide .swipeTxtWrap strong {
   font-size: 30px;
 }
-.swiper-slide .swipeTxtWrap p{
+.swiper-slide .swipeTxtWrap p {
   margin-top: 10px;
   font-size: 26px;
 }
 
-
-@media screen and (max-width:900px){
+@media screen and (max-width: 900px) {
   .swiper {
     height: 800px;
   }
   .swiper-slide {
     flex-direction: column;
   }
-  .swiper-slide .swipeImgWrap{
+  .swiper-slide .swipeImgWrap {
     width: 80%;
   }
-  .swiper-slide .swipeTxtWrap{
+  .swiper-slide .swipeTxtWrap {
+    width: 400px;
     margin-left: 0;
   }
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width: 500px) {
   .swiper {
-    margin-left:30px;
+    margin-left: 15px;
+    width: 350px;
+  }
+
+  .swiper-slide .swipeTxtWrap {
+    width: 330px;
+  }
+
+  .swiper-slide .swipeTxtWrap strong {
+    font-size: 26px;
+  }
+
+  .swiper-slide .swipeTxtWrap p {
+    font-size: 24px;
   }
 }
