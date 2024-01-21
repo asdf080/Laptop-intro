@@ -106,11 +106,6 @@ section h2.secTit {
   text-align: center;
   font-size: 60px;
 }
-section h3 {
-  text-align: center;
-  font-size: 30px;
-  margin-bottom: 80px;
-}
 
 /* 첫번째 섹션 */
 section#bubble .bubbleLine {
@@ -145,6 +140,13 @@ section#bubble #bubbleContent img {
   height: auto;
 }
 
+/* 두번째 섹션 */
+section#partDesc h3 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 80px;
+}
+
 /* 세번째 섹션 */
 section#popGoods h4 {
   text-align: center;
@@ -164,12 +166,72 @@ section#popGoods article #lastGrid {
 }
 
 section#popGoods div {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 section#popGoods article > div {
   border-radius: 20px;
   padding: 20px 0;
+}
+
+/* 네번째 섹션 */
+section#popBrands .secTit {
+  margin-bottom: 50px;
+}
+
+section#popBrands #togBrandWrap {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
+  /* width: 100%; */
+}
+
+section#popBrands #togBrandWrap button {
+  padding: 7px 10px;
+  font-size: 20px;
+  min-width: 70px;
+  border: none;
+  background: none;
+  font-weight: bold;
+  opacity: 0.4;
+}
+
+#togBrandWrap .line {
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  margin: 10px 0 0 0;
+  background: #ff1847;
+}
+
+#togBrandWrap button:hover {
+  opacity: 0.7;
+}
+#togBrandWrap button.active {
+  opacity: 1;
+}
+
+section#popBrands article {
+  display: none;
+  transition: all 0.4s;
+}
+
+section#popBrands article#brdArt1 {
+  display: block;
+}
+
+.ScroHidden {
+  opacity: 0.5;
+  transform: translateY(20px);
+}
+
+.Scrovisible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media screen and (min-width: 500px) {
