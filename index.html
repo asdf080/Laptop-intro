@@ -206,38 +206,31 @@
         </article>
       </section>
       <section id="popBrands">
-        <h2 class="secTit">인기 브랜드</h2>
+        <h2 class="secTit">브랜드</h2>
         <div id="togBrandWrap">
           <button id="brdBtn1" class="active">삼성전자</button>
           <button id="brdBtn2">LG</button>
           <button id="brdBtn3">ASUS</button>
           <button id="brdBtn4">HP</button>
         </div>
-        <article id="brdArt1">1</article>
-        <article id="brdArt2" class="ScroHidden">2</article>
+        <article id="brdArt1">
+          <img src="img/삼성전자.jpg" alt="" />
+          <div>ㅁㄴㅇㄻㄴㅇㄹ</div>
+        </article>
+        <article id="brdArt2" class="ScroHidden">
+          <img src="img/LG그램.jpg" alt="" />
+          <div>ㅁㄴㅇㄹ</div>
+        </article>
         <article id="brdArt3" class="ScroHidden">3</article>
         <article id="brdArt4" class="ScroHidden">4</article>
       </section>
+      <section id="mapSect">
+        <h2 class="secTit">제목</h2>
+        <div id="divMap"></div>
+      </section>
     </main>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d84ef04b03021c9cf488b69539f3c2f8&libraries=services"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        effect: "cards",
-        grabCursor: true,
-        loop: true,
-        breakpoints: {
-          280: {
-            //280px 이하의 크기에서 옵션 값
-          },
-          768: {
-            //768px 이하의 크기에서 옵션 값
-          },
-          1024: {
-            //1024px 이하의 크기에서 옵션 값
-          },
-        },
-      });
-    </script>
     <script src="script/script.js"></script>
     <script src="script/brandMenu.js"></script>
   </body>

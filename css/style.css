@@ -191,6 +191,7 @@ section#popBrands #togBrandWrap {
 }
 
 section#popBrands #togBrandWrap button {
+  cursor: pointer;
   padding: 7px 10px;
   font-size: 20px;
   min-width: 70px;
@@ -209,10 +210,10 @@ section#popBrands #togBrandWrap button {
   transition: all 0.3s ease;
 }
 
-#togBrandWrap button:hover {
+section#popBrands #togBrandWrap button:hover {
   opacity: 0.7;
 }
-#togBrandWrap button.active {
+section#popBrands #togBrandWrap button.active {
   opacity: 1;
 }
 
@@ -233,6 +234,24 @@ section#popBrands article#brdArt1 {
 .Scrovisible {
   opacity: 1;
   transform: translateY(0);
+}
+
+section#popBrands article img {
+  width: 90%;
+  border-radius: 10px;
+}
+
+/* 다섯번째 섹션 */
+section#mapSect .secTit {
+  margin-bottom: 50px;
+}
+
+section#mapSect #divMap {
+  width: 90%;
+  height: 500px;
+  background-color: #aaa;
+  border-radius: 10px;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 500px) {
