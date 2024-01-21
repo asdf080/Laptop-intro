@@ -205,7 +205,8 @@ section#popBrands #togBrandWrap button {
   position: absolute;
   bottom: 0;
   margin: 10px 0 0 0;
-  background: #ff1847;
+  background: var(--greenColor);
+  transition: all 0.3s ease;
 }
 
 #togBrandWrap button:hover {
