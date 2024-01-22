@@ -254,7 +254,7 @@ section#popBrands article {
 }
 
 section#popBrands article div {
-  font-size: 25px;
+  font-size: 22px;
   padding: 20px 15px 5px 15px;
 }
 
@@ -288,6 +288,14 @@ section#mapSect #divMap {
   background-color: #aaa;
   border-radius: 10px;
   margin: 0 auto;
+}
+
+/* 푸터 */
+footer {
+  height: 200px;
+  background: var(--greenColor);
+  padding: 20px 15px;
+  color: white;
 }
 
 @media screen and (min-width: 500px) {
@@ -345,7 +353,7 @@ section#mapSect #divMap {
     flex-direction: row;
   }
   section#popBrands article img {
-    width: 60%;
+    width: 50%;
   }
   section#popBrands article div {
     padding-left: 50px;
