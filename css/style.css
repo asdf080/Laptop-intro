@@ -258,6 +258,15 @@ section#popBrands article div {
   padding: 20px 15px 5px 15px;
 }
 
+section#popBrands article p {
+  margin-top: 10px;
+}
+
+section#popBrands article p a {
+  font-weight: bold;
+  color: var(--greenColor);
+}
+
 section#popBrands article#brdArt1 {
   display: flex;
 }
