@@ -107,6 +107,7 @@ section h2.secTit {
   text-align: center;
   font-size: 60px;
   color: var(--greenColor);
+  line-height: 70px;
 }
 
 /* 첫번째 섹션 */
@@ -151,6 +152,7 @@ section#partDesc h3 {
 
 /* 세번째 섹션 */
 section#popGoods h4 {
+  font-size: 20px;
   text-align: center;
   margin-bottom: 80px;
   color: #777;
@@ -168,7 +170,6 @@ section#popGoods article #lastGrid {
 }
 
 section#popGoods article ul li {
-  min-width: 200px;
   border-radius: 20px;
   padding: 20px 0;
   display: flex;
@@ -215,13 +216,12 @@ section#popBrands #togBrandWrap {
   display: flex;
   justify-content: space-around;
   margin-bottom: 40px;
-  /* width: 100%; */
 }
 
 section#popBrands #togBrandWrap button {
   cursor: pointer;
   padding: 7px 10px;
-  font-size: 20px;
+  font-size: 25px;
   min-width: 70px;
   border: none;
   background: none;
@@ -248,10 +248,18 @@ section#popBrands #togBrandWrap button.active {
 section#popBrands article {
   display: none;
   transition: all 0.4s;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section#popBrands article div {
+  font-size: 25px;
+  padding: 20px 15px 5px 15px;
 }
 
 section#popBrands article#brdArt1 {
-  display: block;
+  display: flex;
 }
 
 .ScroHidden {
@@ -331,6 +339,16 @@ section#mapSect #divMap {
   }
   section#popGoods article #lastGrid img {
     width: 100%;
+  }
+
+  section#popBrands article {
+    flex-direction: row;
+  }
+  section#popBrands article img {
+    width: 60%;
+  }
+  section#popBrands article div {
+    padding-left: 50px;
   }
 }
 

@@ -33,7 +33,7 @@ function resetArt() {
 }
 
 function showArt(art) {
-  art.style.display = "block";
+  art.style.display = "flex";
   setTimeout(() => {
     art.classList.remove("ScroHidden");
     art.classList.add("Scrovisible");
