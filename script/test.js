@@ -54,7 +54,7 @@ function updatePage1(option) {
     Wrap1.remove();
   }, 260);
   setTimeout(() => {
-    addQna(2, "가격과 무게, 둘 중 뭐가 더 중요하신가요?", "가성비 좋고 저렴한 제품이 좋아요.", "휴대하기 간편한 제품이 좋아요.", "fou", "fif");
+    addQna(2, "가격과 무게, 어느 쪽이 중요하신가요?", "가성비 좋고 저렴한 제품이 좋아요.", "휴대하기 간편한 제품이 좋아요.", "fou", "fif");
     document.querySelector(".qnaWrap2").classList.add("upShow");
     document.querySelector(".qnaWrap2").style.display = "flex";
     document.querySelector("#Btn2").addEventListener("click", () => btnClick("Btn2"));
@@ -80,7 +80,7 @@ function addQna(num, tit, cont1, cont2, id1, id2) {
   qTitle.appendChild(titleH3);
   // 왼쪽이미지
   const qnaImage = document.createElement("img");
-  qnaImage.src = "img/qna1.webp";
+  qnaImage.src = `img/qna${num}.webp`;
   qnaImage.alt = "사용자이미지";
 
   qnaLe.appendChild(qTitle);
