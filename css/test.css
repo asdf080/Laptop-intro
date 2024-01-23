@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  word-break: keep-all;
+  font-family: "IBMPlexSansKR-Regular";
+  --greenColor: #244655;
+  --greenColor2: #4f849b;
+  --ligthGreen: #f0f4f3;
+  --redColor: #d73a2c;
+}
+
+body {
+  background: var(--ligthGreen);
+}
+
+button {
+  cursor: pointer;
+}
+
+section#main {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  display: none;
+}
+
+section#main h1 {
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+.downHide {
+  animation: downHide 0.3s ease;
+}
+
+section#qna {
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+section#qna .qnaWrap {
+  display: flex;
+  justify-content: center;
+  background: white;
+  border-radius: 30px;
+  box-shadow: 0 0 30px -2px rgba(0, 0, 0, 0.1);
+  padding: 20px 40px 0 20px;
+}
+
+section#qna .qnaWrap .qnaLe,
+section#qna .qnaWrap .qnaRi {
+  padding: 20px 0;
+}
+
+section#qna .qnaWrap .qnaLe {
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section#qna .qnaWrap .qnaLe .qTitle {
+  width: 90%;
+  font-size: 30px;
+  /* display: inline-block; */
+}
+
+section#qna .qnaWrap .qnaLe img {
+  width: 70%;
+  max-width: 330px;
+}
+
+section#qna .qnaWrap .qnaRi {
+  font-size: 20px;
+}
+section#qna .qnaWrap .qnaRi .qnaA {
+  background: var(--ligthGreen);
+  border-radius: 25px;
+  padding: 20px;
+  margin: 20px 0;
+}
+section#qna .qnaWrap .qnaRi button {
+  background: none;
+  width: 100px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+@keyframes downHide {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+@keyframes upShow {
+  0% {
+    opacity: 0.2;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@font-face {
+  font-family: "SuseongDotum";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/SuseongDotum.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "IBMPlexSansKR-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff") format("woff");
+}
