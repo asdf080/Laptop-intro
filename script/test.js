@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const Wrap1 = document.querySelector(".qnaWrap1");
+const Wrap2 = document.querySelector(".qnaWrap2");
 
 // 메인화면 버튼
 document.querySelector("#main button").addEventListener("click", () => {
@@ -45,7 +46,7 @@ const qnaAWrap = document.querySelector(".qnaAWrap");
 let resultStr = "";
 
 // 첫번째 질문창 넘기기
-function updatePage(option) {
+function updatePage1(option) {
   resultStr += option;
   Wrap1.classList.remove("upShow");
   Wrap1.classList.add("downHide");
@@ -58,9 +59,6 @@ function updatePage(option) {
     document.querySelector(".qnaWrap2").style.display = "flex";
     document.querySelector("#secBtn").addEventListener("click", () => btnClick("secBtn"));
   }, 300);
-  document.querySelectorAll('input[name="qna1"]').forEach((radio) => {
-    radio.checked = false;
-  });
 }
 
 // 두번째 질문창 만들기
@@ -208,8 +206,8 @@ function btnClick(buttonId) {
     else if (document.querySelector("#fif").checked) selected = "2";
   }
 
-  if (selected) {
-    updatePage(selected);
+  if (selected.length == 1) {
+    updatePage1(selected);
     selected = null;
     console.log(resultStr);
   } else {
