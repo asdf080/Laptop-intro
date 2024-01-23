@@ -56,7 +56,7 @@ section#qna .qnaWrap {
 
 section#qna .qnaWrap .qnaLe,
 section#qna .qnaWrap .qnaRi {
-  padding: 20px 0;
+  padding: 30px 0;
 }
 
 section#qna .qnaWrap .qnaLe {
@@ -69,7 +69,7 @@ section#qna .qnaWrap .qnaLe {
 section#qna .qnaWrap .qnaLe .qTitle {
   width: 90%;
   font-size: 30px;
-  /* display: inline-block; */
+  color: var(--greenColor);
 }
 
 section#qna .qnaWrap .qnaLe img {
@@ -79,18 +79,58 @@ section#qna .qnaWrap .qnaLe img {
 
 section#qna .qnaWrap .qnaRi {
   font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+section#qna .qnaWrap .qnaRi .qnaAWrap {
+  display: flex;
+  flex-direction: column;
+}
+
+section#qna .qnaWrap .qnaRi .qnaAWrap input {
+  display: none;
 }
 section#qna .qnaWrap .qnaRi .qnaA {
   background: var(--ligthGreen);
   border-radius: 25px;
   padding: 20px;
-  margin: 20px 0;
+  margin: 10px 0;
+  font-weight: 600px;
+  cursor: pointer;
 }
+
+#fir:checked + .qnaA {
+  font-weight: bold;
+}
+#sec:checked + .qnaA {
+  font-weight: bold;
+}
+#thi:checked + .qnaA {
+  font-weight: bold;
+}
+
+section#qna .qnaWrap .qnaRi .redWord {
+  color: var(--redColor);
+  font-weight: bold;
+}
+
 section#qna .qnaWrap .qnaRi button {
+  align-self: flex-end;
   background: none;
   width: 100px;
   padding: 10px;
   border-radius: 20px;
+  font-size: 17px;
+  font-weight: bold;
+  border: 2px solid var(--greenColor2);
+  color: var(--greenColor2);
+}
+
+section#qna .qnaWrap .qnaRi button:hover {
+  background: var(--greenColor2);
+  color: white;
 }
 
 @keyframes downHide {

@@ -30,3 +30,22 @@ document.querySelector("#main button").addEventListener("click", () => {
     document.querySelector("#main").style.display = "none";
   }, 300);
 });
+
+let resultStr = "";
+
+document.querySelector(".qnaRi button").addEventListener("click", () => {
+  if (document.querySelector("#fir").checked) {
+    resultStr += "A";
+  } else if (document.querySelector("#sec").checked) {
+    resultStr += "B";
+  } else if (document.querySelector("#thi").checked) {
+    resultStr += "C";
+  } else {
+    let redDiv = document.createElement("div");
+    redDiv.className = "redWord";
+    redDiv.textContent = "옵션을 선택해주세요.";
+    document.querySelector(".qnaAWrap").appendChild(redDiv);
+  }
+});
+
+//             <div class="redWord">옵션을 선택해주세요.</div>
