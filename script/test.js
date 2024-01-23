@@ -33,6 +33,15 @@ document.querySelector("#main button").addEventListener("click", () => {
 
 let resultStr = "";
 
+document.querySelectorAll('.qnaRi input[type="radio"]').forEach((radio) => {
+  radio.addEventListener("change", () => {
+    let warning = document.querySelector(".qnaAWrap .redWord");
+    if (warning) {
+      warning.remove();
+    }
+  });
+});
+
 document.querySelector(".qnaRi button").addEventListener("click", () => {
   if (document.querySelector("#fir").checked) {
     resultStr += "A";
@@ -41,11 +50,12 @@ document.querySelector(".qnaRi button").addEventListener("click", () => {
   } else if (document.querySelector("#thi").checked) {
     resultStr += "C";
   } else {
-    let redDiv = document.createElement("div");
-    redDiv.className = "redWord";
-    redDiv.textContent = "옵션을 선택해주세요.";
-    document.querySelector(".qnaAWrap").appendChild(redDiv);
+    let redWord = document.querySelector(".qnaAWrap .redWord");
+    if (!redWord) {
+      let redDiv = document.createElement("div");
+      redDiv.className = "redWord";
+      redDiv.textContent = "옵션을 선택해주세요.";
+      document.querySelector(".qnaAWrap").appendChild(redDiv);
+    }
   }
 });
-
-//             <div class="redWord">옵션을 선택해주세요.</div>
