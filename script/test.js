@@ -54,19 +54,20 @@ function updatePage1(option) {
     Wrap1.remove();
   }, 260);
   setTimeout(() => {
-    addQna2();
+    addQna(2, "가격과 무게, 둘 중 뭐가 더 중요하신가요?", "가성비 좋고 저렴한 제품이 좋아요.", "휴대하기 간편한 제품이 좋아요.", "fou", "fif");
     document.querySelector(".qnaWrap2").classList.add("upShow");
     document.querySelector(".qnaWrap2").style.display = "flex";
-    document.querySelector("#secBtn").addEventListener("click", () => btnClick("secBtn"));
+    document.querySelector("#Btn2").addEventListener("click", () => btnClick("Btn2"));
   }, 300);
 }
 
-// 두번째 질문창 만들기
-function addQna2() {
-  const qnaWrap2 = document.createElement("article");
-  qnaWrap2.className = "qnaWrap2";
-  qnaWrap2.classList.add("qnaWrap");
-  qnaWrap2.style.display = "none";
+// 새 질문창 만들기
+function addQna(num, tit, cont1, cont2, id1, id2) {
+  const qnaWrap = {}; // 객체를 생성합니다.
+  qnaWrap[num] = document.createElement("article");
+  qnaWrap[num].className = `qnaWrap${num}`;
+  qnaWrap[num].classList.add("qnaWrap");
+  qnaWrap[num].style.display = "none";
 
   // 왼쪽
   const qnaLe = document.createElement("div");
@@ -75,7 +76,7 @@ function addQna2() {
   const qTitle = document.createElement("div");
   qTitle.className = "qTitle";
   const titleH3 = document.createElement("h3");
-  titleH3.textContent = "가격과 무게, 어떤 것이 더 중요하다고 생각하시나요?";
+  titleH3.textContent = tit;
   qTitle.appendChild(titleH3);
   // 왼쪽이미지
   const qnaImage = document.createElement("img");
@@ -91,70 +92,10 @@ function addQna2() {
   // 오른쪽 선택지
   const qnaAWrap = document.createElement("div");
   qnaAWrap.className = "qnaAWrap";
-  ["가볍게 들 수 있는 제품이 좋아요.", "부담없이 쓸 수 있는 저렴한 제품이 좋아요."].forEach((text, index) => {
+  [cont1, cont2].forEach((text, index) => {
     const input = document.createElement("input");
     input.type = "radio";
-    input.id = ["fou", "fif"][index];
-    input.name = "qna2";
-
-    const label = document.createElement("label");
-    label.htmlFor = input.id;
-    label.className = "qnaA";
-    label.textContent = text;
-
-    qnaAWrap.appendChild(input);
-    qnaAWrap.appendChild(label);
-  });
-  // 오른쪽 버튼
-  const button = document.createElement("button");
-  button.id = "secBtn";
-  button.textContent = "다음 →";
-
-  qnaRi.appendChild(qnaAWrap);
-  qnaRi.appendChild(button);
-
-  // 왼쪽, 오른쪽 추가
-  qnaWrap2.appendChild(qnaLe);
-  qnaWrap2.appendChild(qnaRi);
-
-  // qnaWrap 추가
-  document.querySelector("#qna").appendChild(qnaWrap2);
-}
-
-// 세번째 질문창 만들기
-function addQna3() {
-  const qnaWrap3 = document.createElement("article");
-  qnaWrap3.className = "qnaWrap3";
-  qnaWrap3.classList.add("qnaWrap");
-  qnaWrap3.style.display = "none";
-
-  // 왼쪽
-  const qnaLe = document.createElement("div");
-  qnaLe.className = "qnaLe";
-  // 왼쪽 제목
-  const qTitle = document.createElement("div");
-  qTitle.className = "qTitle";
-  const titleH3 = document.createElement("h3");
-  titleH3.textContent = "특별히 원하는 기능이 있으신가요?";
-  qTitle.appendChild(titleH3);
-  // 왼쪽이미지
-  const qnaImage = document.createElement("img");
-  qnaImage.src = "img/qna1.webp";
-  qnaImage.alt = "사용자이미지";
-
-  qnaLe.appendChild(qTitle);
-  qnaLe.appendChild(qnaImage);
-
-  // 오른쪽
-  const qnaRi = document.createElement("div");
-  qnaRi.className = "qnaRi";
-  // 오른쪽 선택지
-  const qnaAWrap = document.createElement("div");
-  qnaAWrap.className = "qnaAWrap";
-  ["터치펜, 터치 스크린 등 특화 기능이 필요해요.", "기본 기능에 충실한 제품이 좋아요."].forEach((text, index) => {
-    const input = document.createElement("input");
-    input.type = "radio";
-    input.id = ["six", "sev"][index];
+    input.id = [id1, id2][index];
     input.name = "qna3";
 
     const label = document.createElement("label");
@@ -167,21 +108,21 @@ function addQna3() {
   });
   // 오른쪽 버튼
   const button = document.createElement("button");
-  button.id = "thiBtn";
+  button.id = `Btn${num}`;
   button.textContent = "다음 →";
 
   qnaRi.appendChild(qnaAWrap);
   qnaRi.appendChild(button);
 
   // 왼쪽, 오른쪽 추가
-  qnaWrap3.appendChild(qnaLe);
-  qnaWrap3.appendChild(qnaRi);
+  qnaWrap[num].appendChild(qnaLe);
+  qnaWrap[num].appendChild(qnaRi);
 
   // qnaWrap 추가
-  document.querySelector("#qna").appendChild(qnaWrap3);
+  document.querySelector("#qna").appendChild(qnaWrap[num]);
 }
 
-// 경고 문구
+// 선택시 경고 문구 삭제
 document.querySelectorAll('.qnaRi input[type="radio"]').forEach((radio) => {
   radio.addEventListener("change", () => {
     let warning = document.querySelector(".redWord");
@@ -193,22 +134,25 @@ document.querySelectorAll('.qnaRi input[type="radio"]').forEach((radio) => {
 
 // 다음 버튼 클릭
 function btnClick(buttonId) {
-  let selected = null;
+  let selected = "";
   let wrapSelector = "";
-  if (buttonId === "firBtn") {
+  if (buttonId === "Btn1") {
     wrapSelector = ".qnaWrap1";
     if (document.querySelector("#fir").checked) selected = "A";
     else if (document.querySelector("#sec").checked) selected = "B";
     else if (document.querySelector("#thi").checked) selected = "C";
-  } else if (buttonId === "secBtn") {
+  } else if (buttonId === "Btn2") {
     wrapSelector = ".qnaWrap2";
     if (document.querySelector("#fou").checked) selected = "1";
     else if (document.querySelector("#fif").checked) selected = "2";
   }
 
-  if (selected.length == 1) {
+  if ("A" <= selected && selected <= "C") {
     updatePage1(selected);
     selected = null;
+    console.log(resultStr);
+  } else if ("1" <= selected && selected <= "3") {
+    console.log("a");
     console.log(resultStr);
   } else {
     let redWord = document.querySelector(".redWord");
@@ -221,4 +165,4 @@ function btnClick(buttonId) {
   }
 }
 
-document.querySelector("#firBtn").addEventListener("click", () => btnClick("firBtn"));
+document.querySelector("#Btn1").addEventListener("click", () => btnClick("Btn1"));
