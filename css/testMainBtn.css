@@ -1,15 +1,11 @@
 section#main button {
   position: relative;
   outline: none;
-  border: 0;
   vertical-align: middle;
   text-decoration: none;
   font-size: 20px;
-  font-family: inherit;
-}
-section#main button {
   font-weight: 600;
-  color: #382b22;
+  color: var(--greenColor);
   text-transform: uppercase;
   padding: 20px 30px;
   background: #f0fff0;

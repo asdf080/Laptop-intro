@@ -11,7 +11,9 @@
 }
 
 body {
-  background: var(--ligthGreen);
+  /* background: var(--ligthGreen); */
+  transition: all 0.2s;
+  height: 100dvh;
 }
 
 button {
@@ -19,21 +21,16 @@ button {
 }
 
 section#main {
-  height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  display: none;
 }
 
 section#main h1 {
+  color: var(--greenColor);
   font-size: 40px;
   margin-bottom: 50px;
-}
-
-.downHide {
-  animation: downHide 0.3s ease;
 }
 
 section#qna {
@@ -67,6 +64,8 @@ section#qna .qnaWrap .qnaLe {
 }
 
 section#qna .qnaWrap .qnaLe .qTitle {
+  min-width: 405px;
+  min-height: 106px;
   width: 90%;
   font-size: 30px;
   color: var(--greenColor);
@@ -110,6 +109,12 @@ section#qna .qnaWrap .qnaRi .qnaA {
 #thi:checked + .qnaA {
   font-weight: bold;
 }
+#fou:checked + .qnaA {
+  font-weight: bold;
+}
+#fif:checked + .qnaA {
+  font-weight: bold;
+}
 
 section#qna .qnaWrap .qnaRi .redWord {
   color: var(--redColor);
@@ -131,6 +136,14 @@ section#qna .qnaWrap .qnaRi button {
 section#qna .qnaWrap .qnaRi button:hover {
   background: var(--greenColor2);
   color: white;
+}
+
+.downHide {
+  animation: downHide 0.3s ease;
+}
+
+.upShow {
+  animation: upShow 0.3s ease;
 }
 
 @keyframes downHide {
