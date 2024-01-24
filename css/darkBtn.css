@@ -8,12 +8,9 @@
   align-items: center;
   -webkit-tap-highlight-color: transparent;
   --hue: 223;
-  --bg: hsl(var(--hue), 10%, 100%);
-  --fg: hsl(var(--hue), 10%, 0%);
   --primary: hsl(var(--hue), 90%, 55%);
   --primaryT: hsla(var(--hue), 90%, 55%, 0);
   --transDur: 0.3s;
-  font-size: calc(16px + (32 - 16) * (100vw - 320px) / (1280 - 320));
   font-size: 15px;
   font-weight: bold;
 }

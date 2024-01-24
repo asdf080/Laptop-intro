@@ -1,18 +1,36 @@
-// const html = document.querySelector("html");
+// 다크모드
+const greenColor = "#244655";
+const lightGreen = "#f0f4f3";
+const mintLeaf = "#7bcb7b";
 
-// html.classList.add("bg-dark");
-
-// document.querySelector("input").addEventListener("change", (event) => {
-//   bgSwitch(event);
-// });
-
-// const bgSwitch = (event) => {
-//   if (event.target.checked) {
-//     // html.classList.add("bg-dark");
-//   } else {
-//     // html.classList.remove("bg-dark");
-//   }
-// }
+const darkBtn = document.querySelector("#theme");
+darkBtn.addEventListener("click", () => {
+  if (document.querySelector("#theme").checked) {
+    for (let a of document.querySelectorAll(".bubbleApos, body")) {
+      a.style.background = "#111";
+    }
+    document.querySelector("#headWrap").style.backgroundImage = 'url("../img/head2.png")';
+    document.querySelector("#titWrap").style.color = "#f0f4f3";
+    for (let a of document.querySelectorAll(".btnTxt")) {
+      a.style.color = lightGreen;
+    }
+    document.querySelector("#navBtm").style.background = greenColor;
+    for (let a of document.querySelectorAll("#navBtm, #navBtm div, #navBtm i, section h3")) {
+      a.style.color = "white";
+    }
+    for (let a of document.querySelectorAll(".secTit")) {
+      a.style.color = mintLeaf;
+    }
+  } else {
+    for (let a of document.querySelectorAll("body, .bubbleApos, #navBtm")) {
+      a.style.background = "";
+    }
+    for (let a of document.querySelectorAll("#titWrap, .btnTxt, #navBtm, #navBtm div, .secTit, #navBtm i, section h3")) {
+      a.style.color = "";
+    }
+    document.querySelector("#headWrap").style.backgroundImage = 'url("../img/headLg.png")';
+  }
+});
 
 // 카드 슬라이드
 var swiper = new Swiper(".mySwiper", {
