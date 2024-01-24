@@ -39,8 +39,8 @@ header div#headWrap nav#navTopWrap {
   width: 100%;
   padding: 15px 20px;
   display: flex;
-  justify-content: flex-end;
-  gap: 30px;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 header div#headWrap nav#navTopWrap button {
@@ -72,6 +72,10 @@ header nav#navBtm {
   gap: 40px;
 }
 
+header nav#navBtm a {
+  color: var(--greenColor);
+}
+
 header nav#navBtm #navBtmTxt {
   display: none;
 }
@@ -88,6 +92,10 @@ header nav#navBtm ul {
   display: flex;
   justify-content: space-around;
   text-align: center;
+}
+
+header nav#navBtm ul li {
+  transition: all 0s;
 }
 
 header nav#navBtm ul li:hover {
@@ -363,11 +371,11 @@ footer #footWrap2 ul a {
 }
 
 footer #footWrap2 #mapWrap {
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
-footer .link a:before,
-footer .link a:after {
+footer .link li:before,
+footer .link li:after {
   content: "";
   border-bottom: solid 1px white;
   position: absolute;
@@ -376,15 +384,15 @@ footer .link a:after {
   transition: all 0.2s ease;
 }
 
-footer .link a:before {
+footer .link li:before {
   left: 0;
 }
-footer .link a:after {
+footer .link li:after {
   right: 0;
 }
 
-footer .link a:hover:before,
-footer .link a:hover:after {
+footer .link li:hover:before,
+footer .link li:hover:after {
   width: 50%;
 }
 
@@ -459,14 +467,12 @@ footer .link a:hover:after {
     margin-bottom: 0;
   }
 
-  footer #footWrap2 {
-    display: flex;
-    gap: 100px;
+  footer #footWrap2 ul a,
+  footer #footWrap2 ul li {
+    display: inline-block;
   }
-
-  footer #footWrap2 ul {
-    flex-direction: column;
-    gap: 0;
+  footer #footWrap2 #mapWrap {
+    margin-bottom: 35px;
   }
 }
 
