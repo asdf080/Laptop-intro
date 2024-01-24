@@ -26,6 +26,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.querySelector("#Btn1").addEventListener("click", () => btnClick("Btn1"));
 
+if (document.querySelector("#main")) {
+  document.body.style.overflowY = "hidden";
+}
+
 const Wrap1 = document.querySelector(".qnaWrap1");
 // 메인화면 버튼
 document.querySelector("#main button").addEventListener("click", () => {
@@ -86,12 +90,18 @@ function updatePage3(option) {
   Wrap3.classList.add("downHide");
   setTimeout(() => {
     Wrap3.remove();
-  }, 260);
+    document.querySelector("#qna").remove();
+  }, 280);
+  setTimeout(() => {
+    addResult(resultStr);
+    document.querySelector(".resultWrap").classList.add("upShow");
+    document.querySelector(".resultWrap").style.display = "block";
+  }, 300);
 }
 
 // 새 질문창 만들기
 function addQna(num, tit, cont1, cont2, id1, id2) {
-  const qnaWrap = {}; // 객체를 생성합니다.
+  const qnaWrap = {};
   qnaWrap[num] = document.createElement("article");
   qnaWrap[num].className = `qnaWrap${num}`;
   qnaWrap[num].classList.add("qnaWrap");
@@ -158,6 +168,58 @@ function addQna(num, tit, cont1, cont2, id1, id2) {
       }
     });
   });
+}
+
+// 결과창 만들기
+function addResult(str) {
+  var section = document.createElement("section");
+  section.id = "result";
+  var article = document.createElement("article");
+  article.className = "resultWrap";
+  article.style.display = "none";
+  var h3 = document.createElement("h3");
+  h3.textContent = "당신에게 맞는 노트북은?";
+  var resultWrapInner = document.createElement("div");
+  resultWrapInner.className = "resultWrapInner";
+
+  var img = document.createElement("img");
+  img.src = `img/result_${str}.png`;
+  img.alt = "img";
+
+  var resultNoteWrap = document.createElement("div");
+  resultNoteWrap.className = "resultNoteWrap";
+
+  var h5 = document.createElement("h5");
+  h5.textContent = resultObj[str].brand;
+
+  var h4 = document.createElement("h4");
+  h4.textContent = resultObj[str].name;
+
+  var price = document.createElement("p");
+  price.textContent = `${resultObj[str].price}원`;
+
+  var description = document.createElement("div");
+  description.textContent = resultObj[str].desc;
+
+  var link = document.createElement("a");
+  link.href = resultObj[str].link;
+  link.target = "_blank";
+  var button = document.createElement("button");
+  button.textContent = "자세히 보기";
+  link.appendChild(button);
+
+  resultNoteWrap.appendChild(h5);
+  resultNoteWrap.appendChild(h4);
+  resultNoteWrap.appendChild(price);
+  resultNoteWrap.appendChild(description);
+  resultNoteWrap.appendChild(link);
+  resultWrapInner.appendChild(img);
+  resultWrapInner.appendChild(resultNoteWrap);
+  article.appendChild(h3);
+  article.appendChild(resultWrapInner);
+  section.appendChild(article);
+
+  document.body.insertBefore(section, document.body.firstChild);
 }
 
 // 선택시 경고 문구 삭제
