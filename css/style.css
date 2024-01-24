@@ -43,11 +43,6 @@ header div#headWrap nav#navTopWrap {
   align-items: flex-end;
 }
 
-header div#headWrap nav#navTopWrap button {
-  background: none;
-  padding: 5px 10px;
-}
-
 header div#headWrap #titWrap {
   height: 90%;
   padding: 0 15px;
