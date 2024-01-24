@@ -18,6 +18,7 @@ body {
 
 button {
   cursor: pointer;
+  background: none;
 }
 
 section#main {
@@ -33,7 +34,8 @@ section#main h1 {
   margin-bottom: 50px;
 }
 
-section#qna {
+section#qna,
+section#result {
   height: 95vh;
   display: flex;
   flex-direction: column;
@@ -115,6 +117,12 @@ section#qna .qnaWrap .qnaRi .qnaA {
 #fif:checked + .qnaA {
   font-weight: bold;
 }
+#six:checked + .qnaA {
+  font-weight: bold;
+}
+#sev:checked + .qnaA {
+  font-weight: bold;
+}
 
 section#qna .qnaWrap .qnaRi .redWord {
   color: var(--redColor);
@@ -123,7 +131,6 @@ section#qna .qnaWrap .qnaRi .redWord {
 
 section#qna .qnaWrap .qnaRi button {
   align-self: flex-end;
-  background: none;
   width: 100px;
   padding: 10px;
   border-radius: 20px;
@@ -134,6 +141,61 @@ section#qna .qnaWrap .qnaRi button {
 }
 
 section#qna .qnaWrap .qnaRi button:hover {
+  background: var(--greenColor2);
+  color: white;
+}
+
+section#result .resultWrap {
+  background: white;
+  border-radius: 30px;
+  box-shadow: 0 0 30px -2px rgba(0, 0, 0, 0.1);
+  padding: 60px 50px 50px 40px;
+  font-size: 22px;
+}
+
+section#result .resultWrap h3 {
+  font-size: 35px;
+  margin-bottom: 20px;
+  color: var(--greenColor);
+}
+
+section#result .resultWrapInner {
+  display: flex;
+}
+
+section#result .resultWrapInner img {
+  max-width: 450px;
+}
+
+.resultWrapInner .resultNoteWrap {
+  max-width: 400px;
+  padding: 30px;
+}
+
+.resultNoteWrap h5 {
+  font-size: 23px;
+  font-weight: normal;
+}
+
+.resultNoteWrap h4 {
+  font-size: 30px;
+}
+
+.resultNoteWrap p {
+  margin-bottom: 20px;
+}
+
+.resultNoteWrap button {
+  margin-top: 20px;
+  font-size: 17px;
+  padding: 10px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  border: 2px solid var(--greenColor2);
+  color: var(--greenColor2);
+}
+
+.resultNoteWrap button:hover {
   background: var(--greenColor2);
   color: white;
 }
