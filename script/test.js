@@ -172,54 +172,42 @@ function addQna(num, tit, cont1, cont2, id1, id2) {
 
 // 결과창 만들기
 function addResult(str) {
-  var section = document.createElement("section");
-  section.id = "result";
-  var article = document.createElement("article");
-  article.className = "resultWrap";
-  article.style.display = "none";
-  var h3 = document.createElement("h3");
-  h3.textContent = "당신에게 맞는 노트북은?";
-  var resultWrapInner = document.createElement("div");
-  resultWrapInner.className = "resultWrapInner";
+  const result = resultObj[str];
+  const htmlContent = `
+    <section id="result">
+      <div class="goHome">
+        <a href="index.html">
+          <i class="fa-solid fa-house" style="color: #244655"></i>
+          <div>홈페이지</div>
+        </a>
+      </div>
+      <article class="resultWrap" style="display: none;">
+        <h3>당신에게 맞는 노트북은?</h3>
+        <div class="resultWrapInner">
+          <img src="img/result_${str}.png" alt="img">
+          <div class="resultNoteWrap">
+            <h5>${result.brand}</h5>
+            <h4>${result.name}</h4>
+            <p>${result.price}원</p>
+            <div>${result.desc}</div>
+            <div class="btnWrap">
+                <a id="reload" href="#">
+                  <div><i class="fa-solid fa-rotate"></i></div>
+                  <div>다시하기</div>
+                </a>
+              <a href="${result.link}" target="_blank"><button>자세히 보기</button></a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+  `;
 
-  var img = document.createElement("img");
-  img.src = `img/result_${str}.png`;
-  img.alt = "img";
+  document.body.insertAdjacentHTML("afterbegin", htmlContent);
 
-  var resultNoteWrap = document.createElement("div");
-  resultNoteWrap.className = "resultNoteWrap";
-
-  var h5 = document.createElement("h5");
-  h5.textContent = resultObj[str].brand;
-
-  var h4 = document.createElement("h4");
-  h4.textContent = resultObj[str].name;
-
-  var price = document.createElement("p");
-  price.textContent = `${resultObj[str].price}원`;
-
-  var description = document.createElement("div");
-  description.textContent = resultObj[str].desc;
-
-  var link = document.createElement("a");
-  link.href = resultObj[str].link;
-  link.target = "_blank";
-  var button = document.createElement("button");
-  button.textContent = "자세히 보기";
-  link.appendChild(button);
-
-  resultNoteWrap.appendChild(h5);
-  resultNoteWrap.appendChild(h4);
-  resultNoteWrap.appendChild(price);
-  resultNoteWrap.appendChild(description);
-  resultNoteWrap.appendChild(link);
-  resultWrapInner.appendChild(img);
-  resultWrapInner.appendChild(resultNoteWrap);
-  article.appendChild(h3);
-  article.appendChild(resultWrapInner);
-  section.appendChild(article);
-
-  document.body.insertBefore(section, document.body.firstChild);
+  document.querySelector("#reload").addEventListener("click", function () {
+    location.reload();
+  });
 }
 
 // 선택시 경고 문구 삭제

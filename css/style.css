@@ -338,25 +338,23 @@ section#mapSect #map {
 
 /* 탑버튼 */
 .topBtn {
+  display: flex;
+  align-items: center;
+  gap: 2px;
   position: fixed;
   bottom: 20px;
   right: 20px;
-  transition: all 0.55s;
+  transition: all 0.5s linear;
   background: var(--redColor);
-  padding: 10px;
+  padding: 10px 15px;
   color: white;
   font-weight: bold;
+  font-size: 20px;
   border-radius: 20px;
+  z-index: 2;
 }
-.topBtn span {
-  display: inline-block;
-  height: 0;
-  width: 0;
-  overflow: hidden;
-}
-.topBtn:hover span {
-  height: auto;
-  width: auto;
+.topBtn:hover {
+  transform: translateX(0) !important;
 }
 
 /* 푸터 */

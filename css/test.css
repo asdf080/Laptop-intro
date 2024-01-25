@@ -15,7 +15,6 @@ a {
 }
 
 body {
-  /* background: var(--ligthGreen); */
   transition: all 0.2s;
   height: 100dvh;
 }
@@ -30,21 +29,20 @@ section#main {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  position: relative;
 }
 
-section#main #goHome {
+section .goHome {
   cursor: pointer;
-  position: absolute;
+  position: fixed;
   top: 15px;
   left: 15px;
 }
 
-section#main #goHome i {
+section .goHome i {
   font-size: 30px;
   margin: 0 auto;
 }
-section#main #goHome div {
+section .goHome div {
   font-size: 18px;
   color: var(--greenColor);
 }
@@ -209,8 +207,25 @@ section#result .resultWrapInner img {
   margin-bottom: 20px;
 }
 
-.resultNoteWrap button {
+.resultNoteWrap .btnWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
   margin-top: 20px;
+}
+
+.resultNoteWrap .btnWrap div {
+  color: var(--greenColor2);
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.resultNoteWrap .btnWrap i {
+  font-size: 20px;
+}
+
+.resultNoteWrap .btnWrap button {
   font-size: 17px;
   padding: 10px 30px;
   border-radius: 30px;

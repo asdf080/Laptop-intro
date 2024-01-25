@@ -181,6 +181,7 @@
   text-align: center;
 }
 #pagination a {
+  cursor: pointer;
   display: inline-block;
   margin-right: 10px;
 }

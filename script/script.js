@@ -48,10 +48,10 @@ document.addEventListener("scroll", function () {
   let chat1 = document.querySelector(".chat1");
   if (chat1.getBoundingClientRect().top - window.innerHeight + 50 <= 0) {
     chat1.classList.remove("chatLe");
-    document.querySelector(".topBtn").classList.remove("chatRi");
+    document.querySelector(".topBtn").style.transform = "translateX(250px)";
   } else {
     chat1.classList.add("chatLe");
-    document.querySelector(".topBtn").classList.add("chatRi");
+    document.querySelector(".topBtn").style.transform = "translateX(350px)";
   }
   let chat2 = document.querySelector(".chat2");
   if (chat2.getBoundingClientRect().top - window.innerHeight + 75 <= 0) {
