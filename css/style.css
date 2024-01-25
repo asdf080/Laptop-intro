@@ -342,8 +342,21 @@ section#mapSect #map {
   bottom: 20px;
   right: 20px;
   transition: all 0.55s;
-  background: #777;
+  background: var(--redColor);
   padding: 10px;
+  color: white;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.topBtn span {
+  display: inline-block;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+.topBtn:hover span {
+  height: auto;
+  width: auto;
 }
 
 /* 푸터 */
