@@ -83,6 +83,7 @@ header div#headWrap #titWrap h1 {
   transition-property: background, transform;
   transform-origin: 100% 100%;
 }
+/* 다크모드에서 색상확인 */
 
 .cursor-grow {
   opacity: 1;
