@@ -55,6 +55,7 @@ header div#headWrap #titWrap {
 }
 header div#headWrap #titWrap h1 {
   font-family: "SuseongDotum";
+  transition: all 1.2s;
 }
 
 header nav#navBtm {
@@ -145,10 +146,12 @@ section#bubble #bubbleContent img {
   max-width: 90%;
   margin-top: 30px;
   height: auto;
+  transition: all 0.5s;
 }
 
 /* 두번째 섹션 */
-section#partDesc h3 {
+section#partDesc h3,
+#mapSect h3 {
   text-align: center;
   font-size: 30px;
   margin-bottom: 80px;
@@ -275,14 +278,47 @@ section#popBrands article#brdArt1 {
   display: flex;
 }
 
-.ScroHidden {
+/* 애니메이션 속성 */
+.chatLe {
+  opacity: 0.5;
+  transform: translateX(-50px);
+}
+.chatRi {
+  opacity: 0.5;
+  transform: translateX(50px);
+}
+
+.h1Hidden {
+  opacity: 0.5;
+  transform: translateX(-100px);
+}
+
+.togHidden {
   opacity: 0.5;
   transform: translateY(20px);
 }
 
-.Scrovisible {
+.togVisible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.scroTit {
+  transition: all 0.4s linear;
+}
+
+.scroHidden {
+  opacity: 0.5;
+  transform: translateY(50px);
+}
+
+.scroVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.blur {
+  filter: blur(5px);
 }
 
 section#popBrands article img {
@@ -291,10 +327,6 @@ section#popBrands article img {
 }
 
 /* 다섯번째 섹션 */
-section#mapSect .secTit {
-  margin-bottom: 50px;
-}
-
 section#mapSect #map {
   width: 90%;
   max-width: 680px;
@@ -302,6 +334,16 @@ section#mapSect #map {
   background-color: #aaa;
   border-radius: 10px;
   margin: 0 auto;
+}
+
+/* 탑버튼 */
+.topBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  transition: all 0.55s;
+  background: #777;
+  padding: 10px;
 }
 
 /* 푸터 */

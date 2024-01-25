@@ -15,6 +15,15 @@
 .map_wrap {
   width: 100%;
 }
+
+#map * {
+  transition: none;
+}
+.infoW {
+  font-size: 12px;
+  max-width: 500px;
+}
+
 #menu_wrap {
   top: 0;
   left: 0;
@@ -23,6 +32,7 @@
   max-height: 400px;
   margin: 20px auto;
   padding: 5px;
+  padding-top: 15px;
   overflow-y: auto;
   background: rgba(255, 255, 255, 0.7);
   z-index: 1;

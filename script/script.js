@@ -38,6 +38,47 @@ darkBtn.addEventListener("click", () => {
   }
 });
 
+// h1 제목
+for (let h of document.querySelectorAll("#titWrap h1")) {
+  h.classList.remove("h1Hidden");
+}
+
+// 말풍선, 섹션 제목
+document.addEventListener("scroll", function () {
+  let chat1 = document.querySelector(".chat1");
+  if (chat1.getBoundingClientRect().top - window.innerHeight + 50 <= 0) {
+    chat1.classList.remove("chatLe");
+    document.querySelector(".topBtn").classList.remove("chatRi");
+  } else {
+    chat1.classList.add("chatLe");
+    document.querySelector(".topBtn").classList.add("chatRi");
+  }
+  let chat2 = document.querySelector(".chat2");
+  if (chat2.getBoundingClientRect().top - window.innerHeight + 75 <= 0) {
+    chat2.classList.remove("chatLe");
+  } else chat2.classList.add("chatLe");
+  let chat3 = document.querySelector(".chat3");
+  if (chat3.getBoundingClientRect().top - window.innerHeight + 75 <= 0) {
+    chat3.classList.remove("chatRi");
+  } else chat3.classList.add("chatRi");
+
+  for (let p of document.querySelectorAll(".scroHidden")) {
+    if (p.getBoundingClientRect().top - window.innerHeight + 50 <= 0) {
+      p.classList.add("scroVisible");
+    } else {
+      p.classList.remove("scroVisible");
+    }
+  }
+
+  for (let b of document.querySelectorAll(".blurImg")) {
+    if (b.getBoundingClientRect().top - window.innerHeight + 200 <= 0) {
+      b.classList.remove("blur");
+    } else {
+      b.classList.add("blur");
+    }
+  }
+});
+
 // 카드 슬라이드
 var swiper = new Swiper(".mySwiper", {
   effect: "cards",
@@ -51,16 +92,16 @@ let BrdArticles = document.querySelectorAll("#popBrands article");
 function resetArt() {
   for (let a of BrdArticles) {
     a.style.display = "none";
-    a.classList.remove("Scrovisible");
-    a.classList.add("ScroHidden");
+    a.classList.remove("togVisible");
+    a.classList.add("togHidden");
   }
 }
 
 function showArt(art) {
   art.style.display = "flex";
   setTimeout(() => {
-    art.classList.remove("ScroHidden");
-    art.classList.add("Scrovisible");
+    art.classList.remove("togHidden");
+    art.classList.add("togVisible");
   }, 50);
 }
 
