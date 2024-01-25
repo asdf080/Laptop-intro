@@ -64,16 +64,13 @@
   min-width: 328px;
   height: 100%;
   min-height: 350px;
-  background: white;
+  background: black;
   border-radius: 20px;
   overflow: hidden;
 }
 
 .swiper-slide .swipeImgWrap img {
   width: 100%;
-  height: auto;
-  object-fit: cover;
-  object-position: center;
 }
 
 .swiper-slide .swipeTxtWrap {

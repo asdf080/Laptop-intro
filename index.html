@@ -10,7 +10,7 @@
     <!-- https://swiperjs.com/demos#effect-cards -->
     <link rel="stylesheet" href="css/swiper.css" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-    <script src="https://kit.fontawesome.com/2cb2c6d57e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/map.css" />
     <script src="https://kit.fontawesome.com/2cb2c6d57e.js" crossorigin="anonymous"></script>
     <!-- https://www.samsung.com/sec/recommend/recommendMain/?tab=pc -->
   </head>
@@ -108,7 +108,7 @@
             <div class="swiper mySwiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <div class="swipeImgWrap">
+                  <div class="swipeImgWrap" style="background: #cdd3ee">
                     <img src="img/intel.png" alt="CPU intel Image" />
                   </div>
                   <div class="swipeTxtWrap">
@@ -118,7 +118,7 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="swipeImgWrap">
-                    <img src="img/intel.png" alt="CPU intel Image" />
+                    <img src="img/GPU.png" alt="gpu Image" style="object-fit: fill" />
                   </div>
                   <div class="swipeTxtWrap">
                     <strong>GPU</strong>
@@ -130,7 +130,7 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="swipeImgWrap">
-                    <img src="img/intel.png" alt="CPU intel Image" />
+                    <img src="img/ssd.png" alt="ssd Image" />
                   </div>
                   <div class="swipeTxtWrap">
                     <strong>Storage</strong>
@@ -139,7 +139,7 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="swipeImgWrap">
-                    <img src="img/intel.png" alt="CPU intel Image" />
+                    <img src="img/RAM.png" alt="CPU intel Image" />
                   </div>
                   <div class="swipeTxtWrap">
                     <strong>RAM</strong>
@@ -147,8 +147,8 @@
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="swipeImgWrap">
-                    <img src="img/intel.png" alt="CPU intel Image" />
+                  <div class="swipeImgWrap" style="background: #fbfbfd">
+                    <img src="img/monitor.jpg" alt="CPU intel Image" />
                   </div>
                   <div class="swipeTxtWrap">
                     <strong>Display</strong>
@@ -258,7 +258,22 @@
       </section>
       <section id="mapSect">
         <h2 class="secTit">내 주변의 노트북 판매처, 어디 있을까?</h2>
-        <div id="divMap"></div>
+        <div class="map_wrap">
+          <div id="menu_wrap" class="bg_white">
+            <div class="option">
+              <div>
+                <form onsubmit="searchPlaces(); return false;">
+                  <input type="text" value="대구 전자제품" id="keyword" size="15" />
+                  <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+              </div>
+            </div>
+            <hr />
+            <ul id="placesList"></ul>
+            <div id="pagination"></div>
+          </div>
+          <div id="map"></div>
+        </div>
       </section>
     </main>
     <footer>
@@ -308,6 +323,7 @@
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d84ef04b03021c9cf488b69539f3c2f8&libraries=services"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script/script.js"></script>
+    <script src="script/kakaoMap.js"></script>
     <script src="script/brandMenu.js"></script>
   </body>
 </html>

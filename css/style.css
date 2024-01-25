@@ -295,8 +295,9 @@ section#mapSect .secTit {
   margin-bottom: 50px;
 }
 
-section#mapSect #divMap {
+section#mapSect #map {
   width: 90%;
+  max-width: 680px;
   height: 500px;
   background-color: #aaa;
   border-radius: 10px;
