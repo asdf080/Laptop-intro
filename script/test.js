@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     mainSection.insertBefore(lottiePlayer, mainSection.firstChild);
   }
 });
+// 여기까지 로티 애니메이션
 
 document.querySelector("#Btn1").addEventListener("click", () => btnClick("Btn1"));
 
@@ -101,63 +102,27 @@ function updatePage3(option) {
 
 // 새 질문창 만들기
 function addQna(num, tit, cont1, cont2, id1, id2) {
-  const qnaWrap = {};
-  qnaWrap[num] = document.createElement("article");
-  qnaWrap[num].className = `qnaWrap${num}`;
-  qnaWrap[num].classList.add("qnaWrap");
-  qnaWrap[num].style.display = "none";
+  const htmlContent = `
+    <article class="qnaWrap${num} qnaWrap" style="display: none;">
+      <div class="qnaLe">
+        <div class="qTitle">
+          <h3>${tit}</h3>
+        </div>
+        <img src="img/qna${num}.webp" alt="사용자이미지">
+      </div>
+      <div class="qnaRi">
+        <div class="qnaAWrap">
+          <input type="radio" id="${id1}" name="qna3">
+          <label for="${id1}" class="qnaA">${cont1}</label>
+          <input type="radio" id="${id2}" name="qna3">
+          <label for="${id2}" class="qnaA">${cont2}</label>
+        </div>
+        <button id="Btn${num}">다음 →</button>
+      </div>
+    </article>
+  `;
 
-  // 왼쪽
-  const qnaLe = document.createElement("div");
-  qnaLe.className = "qnaLe";
-  // 왼쪽 제목
-  const qTitle = document.createElement("div");
-  qTitle.className = "qTitle";
-  const titleH3 = document.createElement("h3");
-  titleH3.textContent = tit;
-  qTitle.appendChild(titleH3);
-  // 왼쪽이미지
-  const qnaImage = document.createElement("img");
-  qnaImage.src = `img/qna${num}.webp`;
-  qnaImage.alt = "사용자이미지";
-
-  qnaLe.appendChild(qTitle);
-  qnaLe.appendChild(qnaImage);
-
-  // 오른쪽
-  const qnaRi = document.createElement("div");
-  qnaRi.className = "qnaRi";
-  // 오른쪽 선택지
-  const qnaAWrap = document.createElement("div");
-  qnaAWrap.className = "qnaAWrap";
-  [cont1, cont2].forEach((text, index) => {
-    const input = document.createElement("input");
-    input.type = "radio";
-    input.id = [id1, id2][index];
-    input.name = "qna3";
-
-    const label = document.createElement("label");
-    label.htmlFor = input.id;
-    label.className = "qnaA";
-    label.textContent = text;
-
-    qnaAWrap.appendChild(input);
-    qnaAWrap.appendChild(label);
-  });
-  // 오른쪽 버튼
-  const button = document.createElement("button");
-  button.id = `Btn${num}`;
-  button.textContent = "다음 →";
-
-  qnaRi.appendChild(qnaAWrap);
-  qnaRi.appendChild(button);
-
-  // 왼쪽, 오른쪽 추가
-  qnaWrap[num].appendChild(qnaLe);
-  qnaWrap[num].appendChild(qnaRi);
-
-  // qnaWrap 추가
-  document.querySelector("#qna").appendChild(qnaWrap[num]);
+  document.querySelector("#qna").insertAdjacentHTML("beforeend", htmlContent);
 
   // 선택시 경고 문구 삭제
   document.querySelectorAll('input[type="radio"]').forEach((radio) => {

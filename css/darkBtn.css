@@ -1,3 +1,7 @@
+* {
+  --redColor: #d73a2c;
+}
+
 #navTopWrap input {
   font: 1em/1.5 sans-serif;
 }
@@ -85,7 +89,7 @@
   display: block;
 }
 .theme__toggle {
-  background-color: hsl(48, 90%, 85%);
+  background-color: #ffcece;
   border-radius: 25% / 50%;
   box-shadow: 0 0 0 0.125em var(--primaryT);
   padding: 0.25em;
@@ -96,7 +100,7 @@
   transition: background-color var(--transDur) ease-in-out, box-shadow 0.15s ease-in-out, transform var(--transDur) ease-in-out;
 }
 .theme__toggle:before {
-  background-color: hsl(48, 90%, 55%);
+  background-color: var(--redColor);
   border-radius: 50%;
   content: "";
   width: 2.5em;

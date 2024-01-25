@@ -17,6 +17,19 @@ li {
   list-style: none;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--redColor);
+  border-radius: 10px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
 header {
   height: 100vh;
   display: flex;
@@ -58,6 +71,26 @@ header div#headWrap #titWrap h1 {
   transition: all 1.2s;
 }
 
+.cursor {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 20;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  transition-property: background, transform;
+  transform-origin: 100% 100%;
+}
+
+.cursor-grow {
+  opacity: 1;
+  transform: scale(2.7);
+  background-color: var(--greenColor);
+  z-index: 1;
+}
+
 header nav#navBtm {
   height: 160px;
   background: #f9f9f9;
@@ -66,7 +99,7 @@ header nav#navBtm {
   justify-content: center;
   align-items: center;
   gap: 40px;
-  transition: all 0s;
+  transition: none;
 }
 
 header nav#navBtm a {
@@ -83,6 +116,11 @@ header nav#navBtm #navBtmTxt div {
   font-family: "SuseongDotum";
 }
 
+header nav#navBtm ul * {
+  transition: none;
+  z-index: 10;
+}
+
 header nav#navBtm ul {
   width: 100%;
   max-width: 800px;
@@ -91,10 +129,16 @@ header nav#navBtm ul {
   text-align: center;
 }
 
-header nav#navBtm ul li:hover {
-  cursor: pointer;
-  font-weight: bold;
+header nav#navBtm ul a:hover {
+  cursor: none;
+  color: white;
+  z-index: 10;
 }
+
+header nav#navBtm ul a:hover i {
+  color: white;
+}
+
 header nav#navBtm ul i {
   font-size: 36px;
   color: var(--greenColor);
@@ -352,6 +396,7 @@ section#mapSect #map {
   font-size: 20px;
   border-radius: 20px;
   z-index: 2;
+  transform: translateX(350px);
 }
 .topBtn:hover {
   transform: translateX(0) !important;
@@ -428,7 +473,7 @@ footer .link li:after {
   position: absolute;
   bottom: 0;
   width: 0;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 footer .link li:before {
@@ -466,7 +511,7 @@ footer .link li:hover:after {
   }
   section {
     margin: 0 auto;
-    padding: 80px 10px;
+    padding: 80px 10px 160px 10px;
   }
 }
 

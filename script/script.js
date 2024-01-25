@@ -38,6 +38,38 @@ darkBtn.addEventListener("click", () => {
   }
 });
 
+// 커서
+let mouseCursor = document.querySelector(".cursor");
+let navBtm = document.querySelector("#navBtm");
+let navLinks = navBtm.querySelectorAll("li");
+
+// #navBtm에 mousemove 이벤트 리스너 추가
+navBtm.addEventListener("mousemove", function (e) {
+  // #navBtm 영역의 좌표
+  let rect = navBtm.getBoundingClientRect();
+
+  // 마우스 커서가 #navBtm 영역 내에 있는지 확인
+  if (e.clientX >= rect.left && e.clientX <= rect.right && e.clientY >= rect.top && e.clientY <= rect.bottom) {
+    // #navBtm 내부일 때 커서를 보이게
+    mouseCursor.style.opacity = "1";
+    mouseCursor.style.left = e.pageX + "px";
+    mouseCursor.style.top = e.pageY + "px";
+  } else {
+    // #navBtm 외부일 때 숨기기
+    mouseCursor.style.opacity = "0";
+  }
+});
+
+// #navBtm에 li에 mouseover, mouseleave 이벤트 리스너 추가
+navLinks.forEach((link) => {
+  link.addEventListener("mouseover", () => {
+    mouseCursor.classList.add("cursor-grow");
+  });
+  link.addEventListener("mouseleave", () => {
+    mouseCursor.classList.remove("cursor-grow");
+  });
+});
+
 // h1 제목
 for (let h of document.querySelectorAll("#titWrap h1")) {
   h.classList.remove("h1Hidden");
@@ -48,7 +80,7 @@ document.addEventListener("scroll", function () {
   let chat1 = document.querySelector(".chat1");
   if (chat1.getBoundingClientRect().top - window.innerHeight + 50 <= 0) {
     chat1.classList.remove("chatLe");
-    document.querySelector(".topBtn").style.transform = "translateX(250px)";
+    document.querySelector(".topBtn").style.transform = "translateX(252px)";
   } else {
     chat1.classList.add("chatLe");
     document.querySelector(".topBtn").style.transform = "translateX(350px)";
