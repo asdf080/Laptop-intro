@@ -270,6 +270,10 @@ section#result .resultWrapInner img {
 }
 
 @media screen and (max-width: 950px) {
+  .goHome {
+    z-index: -1;
+  }
+
   section#qna,
   section#result {
     height: auto;
