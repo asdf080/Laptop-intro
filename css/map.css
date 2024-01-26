@@ -128,7 +128,8 @@
   width: 36px;
   height: 37px;
   margin: 10px 0 0 10px;
-  background: url(../img/marker_number_green.png) no-repeat;
+  background: url(../img/marker_number.svg);
+  /* background: url(../img/marker_number_green.png) no-repeat; */
 }
 #placesList .item .marker_1 {
   background-position: 0 -10px;
