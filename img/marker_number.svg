@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="691" viewBox="0 0 36 691">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 26.804px;
+        fill: #fff;
+        font-family: SUIT;
+        font-weight: 700;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 1px;
+      }
+    </style>
+  </defs>
+  <image x="2" y="10" width="34" height="681" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAKpCAYAAADZr/7wAAAG1UlEQVR4nO3ZzWtcZQCF8ZOkRKOLQsCNoii68QuEbgVBRNwKutFNVxUXQlEQBFEUF4IgKIgogm4UioJbUfwL3Ch+UDUqYm214kdta2xNGnnLufpyfO/NnelkFHkODE3TyZ0ndyYzk/4Wrrr1Tg1sVdJtkm6XdIWk3b7qMUlfSXpT0luSfho6yJjt6rlOucFHJN0raaXnOnsk3SFpXdLzkh534FRbbHzRTZI+l3T/QES9FV/3S3/tTEL2Snpb0kVTHGvVX7v3XENulvSCpOVpDuSVr33Jx5oqpHw3r59jRLclH2t1mpDHJv3CbbbqY04UcomkfTOM6LbPxx4dcteM7pLcso89OmTqH7kRu3GSkBt2MGTPJCGzfJDmRj8fLfrH7V9fCflhByNGH7uEfLqDIaOPXULe2cGQ0ccuIW9I2tyBiE0fe3TImqQDOxBywMceHVL2sKTTM4w47WOOXhdS3vbdN8OQB3zMiUPKXpT0zAwiXpH0nKSFnktz+Z61fCfXT/PGxntP0n5JF+rvGy1/bkk648umL2f8+bPLkHKFuyV9PMVT/3FJD0q63MftQrob/0PSKV/KG+7f/fFGK6TsO0n3+F3WJCs/JZdJutQP1g3fePfxad9w97mTkn6WdKL8+9Lqlde2busTSddJumZkyGd+8lr2N7fLr2FLfhwu+M/F6vPLPlPl7Gy2fp3ott+1260c7F1JF/iy4kv5+PzGxyv+eMmPkbOPk74z0t3n5Uq3bBPyoX8PWmxcFqqzUr/Sn/Ld8qPPyNbQGSl7epvng3LAj6rvNM9GfSa6u+JXPw6P+IyXB3PzN7165UH16MC/H/R3nSFdxHk+C+u+8fLb4BeSDjnor9e4vt99670m6SFJV8fnf5N02De8VJ36Rd+l5afie1/niD/+xWfxHy+yY0LKFz0h6dX4/DfVu/8u4JRv7GtfDjnguP9tq3H80SHyc8STfo6QD3rMp/6M7+tDfrVd8+PqqM/axlDApCHlrDwl6Vn//bDPwknf6EE/96w5YL17EI7d2JCyl/1/JuUx8b7PQvnR/cBvCY/6aXvb7761SUJO+JX1Yj+BfVsFrE8b0G2SEPm/LXb7gXrCZ2Ciu2BWIWv+mq18GZ93iLqX7Vlvu2fWuY2QHCE5QnL/mZDtntDQCaET1cfoRB2CTtQh6ESGoBMZgk5kCDqRIehEhgidaIQInegJQSfQCXQCnUAn0Al0wkMnWkMn5jJCcoTkCMmhEzl0YigEnahD0Ik6BJ3IEHQiQ9CJDEEnMgSdyBChE40QoRM9IegEOoFOoBPoBDqBTnjoRGvoxFxGSI6QHCE5dCKHTgyFoBN1CDpRh6ATGYJOZAg6kSHoRIagExkidKIRInSiJwSdQCfQCXQCnUAn0AkPnWgNnZjLCMkRkiMkh07k0ImhEHSiDkEn6hB0IkPQiQxBJzIEncgQdCJDhE40QoRO9ISgE+gEOoFOoBPoBDrhoROtoRNzGSE5QnKE5NCJHDoxFIJO1CHoRB2CTmQIOpEh6ESGoBMZgk5kiNCJRojQiZ4QdAKdQCfQCXQCnUAnPHSiNXRiLiMkR0iOkBw6kUMnhkLQiToEnahD0IkMQScyBJ3IEHQiQ9CJDBE60QgROtETgk6gE+gEOoFOoBPohIdOtIZOzGWE5AjJEZJDJ3LoxFAIOlGHoBN1CDqRIehEhqATGYJOZAg6kSFCJxohQid6QtAJdAKdQCfQCXQCnfDQidbQibmMkBwhOUJy6EQOnRgKQSfqEHSiDkEnMgSdyBB0IkPQiQxBJzJE6EQjROhETwg6gU6gE+gEOoFOoBMeOtEaOjGXEZIjJEdIDp3IoRNDIehEHYJO1CHoRIagExmCTmQIOpEh6ESGCJ1ohAid6AlBJ9AJdAKdQCfQCXTCQydaQyfmMkJyhOQIyaETOXRiKASdqEPQiToEncgQdCJD0IkMQScyBJ3IEKETjRChEz0h6AQ6gU6gE+gEOoFOeOhEa+jEXEZIjpAcITl0IodODIWgE3UIOlGHoBMZgk5kCDqRIehEhqATGSJ0ohEidKInBJ1AJ9AJdAKdQCfQCQ+daA2dmMsIyRGSIySHTuTQiaEQdKIOQSfqEHQiQ9CJDEEnMgSdyBB0IkOETjRChE70hKAT6AQ6gU6gE+gEOuGhE62hE3MZITlCcoTk0IkcOjEUgk7UIehEHYJOZAg6kSHoRIagExmCTmSI0IlGiNCJnhB0Ap1AJ9AJdAKdQCc8dKI1dGIuIyRHSI6QHDqRQyeGQtCJOgSdqEPQiQxBJzIEncgQdCJD0IkMETrRCBE60ROCTqAT6AQ6gU6gE+iE9z/XCUl/Ap8tEryas4drAAAAAElFTkSuQmCC"/>
+  <text id="_1" data-name="1" class="cls-1" transform="translate(10.833 26.774) scale(0.522)">1</text>
+  <text id="_2" data-name="2" class="cls-1" transform="translate(9.833 72.775) scale(0.522)">2</text>
+  <text id="_3" data-name="3" class="cls-1" transform="translate(9.833 118.775) scale(0.522)">3</text>
+  <text id="_4" data-name="4" class="cls-1" transform="translate(9.833 164.774) scale(0.522)">4</text>
+  <text id="_5" data-name="5" class="cls-1" transform="translate(9.833 210.774) scale(0.522)">5</text>
+  <text id="_6" data-name="6" class="cls-1" transform="translate(9.833 256.774) scale(0.522)">6</text>
+  <text id="_7" data-name="7" class="cls-1" transform="translate(9.833 302.775) scale(0.522)">7</text>
+  <text id="_8" data-name="8" class="cls-1" transform="translate(9.833 348.775) scale(0.522)">8</text>
+  <circle class="cls-2" cx="14.156" cy="666.156" r="10.156"/>
+  <circle id="Ellipse_1_copy" data-name="Ellipse 1 copy" class="cls-2" cx="14.047" cy="620.047" r="10.047"/>
+  <circle id="Ellipse_1_copy_2" data-name="Ellipse 1 copy 2" class="cls-2" cx="14.156" cy="574.156" r="10.156"/>
+  <circle id="Ellipse_1_copy_3" data-name="Ellipse 1 copy 3" class="cls-2" cx="14.094" cy="528.094" r="10.094"/>
+  <circle id="Ellipse_1_copy_4" data-name="Ellipse 1 copy 4" class="cls-2" cx="14.156" cy="482.156" r="10.156"/>
+  <circle id="Ellipse_1_copy_5" data-name="Ellipse 1 copy 5" class="cls-2" cx="13.906" cy="435.906" r="9.906"/>
+  <circle id="Ellipse_1_copy_6" data-name="Ellipse 1 copy 6" class="cls-2" cx="14.094" cy="390.094" r="10.094"/>
+  <circle id="Ellipse_1_copy_7" data-name="Ellipse 1 copy 7" class="cls-2" cx="14.094" cy="344.094" r="10.094"/>
+  <circle id="Ellipse_1_copy_8" data-name="Ellipse 1 copy 8" class="cls-2" cx="14.156" cy="298.156" r="10.156"/>
+  <circle id="Ellipse_1_copy_9" data-name="Ellipse 1 copy 9" class="cls-2" cx="14.156" cy="252.156" r="10.156"/>
+  <circle id="Ellipse_1_copy_10" data-name="Ellipse 1 copy 10" class="cls-2" cx="14.094" cy="206.094" r="10.094"/>
+  <circle id="Ellipse_1_copy_11" data-name="Ellipse 1 copy 11" class="cls-2" cx="14.094" cy="160.094" r="10.094"/>
+  <circle id="Ellipse_1_copy_12" data-name="Ellipse 1 copy 12" class="cls-2" cx="14.094" cy="114.094" r="10.094"/>
+  <circle id="Ellipse_1_copy_13" data-name="Ellipse 1 copy 13" class="cls-2" cx="14" cy="68" r="10"/>
+  <circle id="Ellipse_1_copy_14" data-name="Ellipse 1 copy 14" class="cls-2" cx="14.094" cy="22.094" r="10.094"/>
+  <text id="_9" data-name="9" class="cls-1" transform="translate(9.833 394.775) scale(0.522)">9</text>
+  <text id="_10" data-name="10" class="cls-1" transform="translate(6.833 440.774) scale(0.522)">10</text>
+  <text id="_11" data-name="11" class="cls-1" transform="translate(7.833 486.774) scale(0.522)">11</text>
+  <text id="_12" data-name="12" class="cls-1" transform="translate(6.833 532.774) scale(0.522)">12</text>
+  <text id="_13" data-name="13" class="cls-1" transform="translate(6.833 578.775) scale(0.522)">13</text>
+  <text id="_14" data-name="14" class="cls-1" transform="translate(6.833 624.775) scale(0.522)">14</text>
+  <text id="_15" data-name="15" class="cls-1" transform="translate(6.833 670.774) scale(0.522)">15</text>
+</svg>
