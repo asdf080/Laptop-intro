@@ -14,8 +14,7 @@ darkBtn.addEventListener("click", () => {
     for (let a of document.querySelectorAll(".btnTxt, #popBrands a")) {
       a.style.color = lightGreen;
     }
-    document.querySelector("#navBtm").style.background = greenColor;
-    for (let a of document.querySelectorAll("#navBtm, #navBtm div, #navBtm i, section h3, .goodsTxtWrap, #togBrandWrap button, #popBrands article")) {
+    for (let a of document.querySelectorAll("section h3, .goodsTxtWrap, #togBrandWrap button, #popBrands article")) {
       a.style.color = "white";
     }
     for (let a of document.querySelectorAll(".secTit")) {
@@ -25,10 +24,10 @@ darkBtn.addEventListener("click", () => {
       a.style.border = "2px solid gray";
     }
   } else {
-    for (let a of document.querySelectorAll("body, .bubbleApos, #navBtm")) {
+    for (let a of document.querySelectorAll("body, .bubbleApos")) {
       a.style.background = "";
     }
-    for (let a of document.querySelectorAll("#titWrap, .btnTxt, #navBtm, #navBtm div, .secTit, #navBtm i, section h3, #popBrands a, .goodsTxtWrap, #togBrandWrap button, #popBrands article")) {
+    for (let a of document.querySelectorAll("#titWrap, .btnTxt, .secTit, section h3, #popBrands a, .goodsTxtWrap, #togBrandWrap button, #popBrands article")) {
       a.style.color = "";
     }
     document.querySelector("#headWrap").style.backgroundImage = 'url("../img/headLg.png")';
@@ -41,14 +40,13 @@ darkBtn.addEventListener("click", () => {
 // 커서
 let mouseCursor = document.querySelector(".cursor");
 let navBtm = document.querySelector("#navBtm");
-let navLinks = navBtm.querySelectorAll("li");
 
 // #navBtm에 mousemove 이벤트 리스너 추가
-navBtm.addEventListener("mousemove", function (e) {
+navBtm.addEventListener("mousemove", (e) => {
   // #navBtm 영역의 좌표
   let rect = navBtm.getBoundingClientRect();
 
-  // 마우스 커서가 #navBtm 영역 내에 있는지 확인
+  // 커서가 #navBtm 영역 내에 있는지 확인
   if (e.clientX >= rect.left && e.clientX <= rect.right && e.clientY >= rect.top && e.clientY <= rect.bottom) {
     // #navBtm 내부일 때 커서를 보이게
     mouseCursor.style.opacity = "1";
@@ -61,7 +59,7 @@ navBtm.addEventListener("mousemove", function (e) {
 });
 
 // #navBtm에 li에 mouseover, mouseleave 이벤트 리스너 추가
-navLinks.forEach((link) => {
+navBtm.querySelectorAll("a").forEach((link) => {
   link.addEventListener("mouseover", () => {
     mouseCursor.classList.add("cursor-grow");
   });

@@ -68,7 +68,7 @@ header div#headWrap #titWrap {
 }
 header div#headWrap #titWrap h1 {
   font-family: "SuseongDotum";
-  transition: all 1.2s;
+  transition: transform 1.2s;
 }
 
 .cursor {
@@ -79,11 +79,10 @@ header div#headWrap #titWrap h1 {
   z-index: 20;
   transform: translate(-50%, -50%);
   pointer-events: none;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   transition-property: background, transform;
   transform-origin: 100% 100%;
 }
-/* 다크모드에서 색상확인 */
 
 .cursor-grow {
   opacity: 1;
@@ -105,6 +104,7 @@ header nav#navBtm {
 
 header nav#navBtm a {
   color: var(--greenColor);
+  padding: 5px 10px;
 }
 
 header nav#navBtm #navBtmTxt {
@@ -219,6 +219,10 @@ section#popGoods article ul {
 
 section#popGoods article #lastGrid {
   grid-column: 1 / 3;
+}
+
+section#popGoods article a {
+  color: inherit;
 }
 
 section#popGoods article ul li {
