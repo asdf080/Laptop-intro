@@ -104,7 +104,7 @@ header nav#navBtm {
 
 header nav#navBtm a {
   color: var(--greenColor);
-  padding: 5px 10px;
+  padding: 20px 30px;
 }
 
 header nav#navBtm #navBtmTxt {
@@ -132,12 +132,12 @@ header nav#navBtm ul {
 
 header nav#navBtm ul a:hover {
   cursor: none;
-  color: white;
+  color: #f9f9f9;
   z-index: 10;
 }
 
 header nav#navBtm ul a:hover i {
-  color: white;
+  color: #f9f9f9;
 }
 
 header nav#navBtm ul i {
