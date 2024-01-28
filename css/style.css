@@ -37,7 +37,7 @@ header {
   user-select: none;
 }
 
-header div#headWrap {
+header div.headWrap {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -47,7 +47,12 @@ header div#headWrap {
   background-size: cover;
 }
 
-header div#headWrap nav#navTopWrap {
+header div.headWrap.darkBg {
+  background: no-repeat center url("../img/head2.png");
+  background-size: cover;
+}
+
+header div.headWrap nav#navTopWrap {
   align-self: flex-start;
   width: 100%;
   padding: 15px 20px;
@@ -56,7 +61,7 @@ header div#headWrap nav#navTopWrap {
   align-items: flex-end;
 }
 
-header div#headWrap #titWrap {
+header div.headWrap #titWrap {
   height: 90%;
   padding: 0 15px;
   font-size: 1.8rem;
@@ -66,7 +71,7 @@ header div#headWrap #titWrap {
   justify-content: center;
   align-items: start;
 }
-header div#headWrap #titWrap h1 {
+header div.headWrap #titWrap h1 {
   font-family: "SuseongDotum";
   transition: transform 1.2s;
 }
@@ -494,7 +499,7 @@ footer .link li:hover:after {
 }
 
 @media screen and (min-width: 500px) {
-  header div#headWrap #titWrap {
+  header div.headWrap #titWrap {
     font-size: 2rem;
   }
   header nav#navBtm ul i {
@@ -503,11 +508,11 @@ footer .link li:hover:after {
 }
 
 @media screen and (min-width: 750px) {
-  header div#headWrap #titWrap {
+  header div.headWrap #titWrap {
     font-size: 3rem;
   }
 
-  header div#headWrap #titWrap h1:last-child {
+  header div.headWrap #titWrap h1:last-child {
     margin-left: 70px;
   }
 
