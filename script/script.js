@@ -9,7 +9,7 @@ darkBtn.addEventListener("click", () => {
     for (let a of document.querySelectorAll(".bubbleApos, body")) {
       a.style.background = "#111";
     }
-    document.querySelector("#headWrap").style.backgroundImage = 'url("/img/head2.png")';
+    document.querySelector("#headWrap").style.backgroundImage = 'url("../img/head2.png")';
     document.querySelector("#titWrap").style.color = "#f0f4f3";
     for (let a of document.querySelectorAll(".btnTxt, #popBrands a")) {
       a.style.color = lightGreen;
@@ -30,7 +30,7 @@ darkBtn.addEventListener("click", () => {
     for (let a of document.querySelectorAll("#titWrap, .btnTxt, .secTit, section h3, #popBrands a, .goodsTxtWrap, #togBrandWrap button, #popBrands article")) {
       a.style.color = "";
     }
-    document.querySelector("#headWrap").style.backgroundImage = 'url("/img/headLg.png")';
+    document.querySelector("#headWrap").style.backgroundImage = 'url("../img/headLg.png")';
     for (let a of document.querySelectorAll("#popGoods li")) {
       a.style.border = "none";
     }
