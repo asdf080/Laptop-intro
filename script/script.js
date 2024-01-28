@@ -9,7 +9,7 @@ darkBtn.addEventListener("click", () => {
     for (let a of document.querySelectorAll(".bubbleApos, body")) {
       a.style.background = "#111";
     }
-    document.querySelector("#headWrap").style.backgroundImage = 'url("../img/head2.png")';
+    document.querySelector("#headWrap").style.backgroundImage = 'url("..img/head2.png")';
     document.querySelector("#titWrap").style.color = "#f0f4f3";
     for (let a of document.querySelectorAll(".btnTxt, #popBrands a")) {
       a.style.color = lightGreen;

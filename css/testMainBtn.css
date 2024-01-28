@@ -1,3 +1,5 @@
+/* https://codepen.io/kathykato/pen/gOOjgmP */
+
 section#main button {
   position: relative;
   outline: none;
@@ -34,7 +36,7 @@ section#main button:hover {
   transform: translate(0, 0.25em);
 }
 section#main button:hover::before {
-  box-shadow: 0 0 0 2px var(--greenColor), 0 0.5em 0 0 #f0fff0;
+  box-shadow: 0 0 0 2px var(--greenColor), 0 0.5em 0 0 #c3dae0;
   transform: translate3d(0, 0.5em, -1em);
 }
 section#main button:active {
@@ -42,6 +44,6 @@ section#main button:active {
   transform: translate(0em, 0.75em);
 }
 section#main button:active::before {
-  box-shadow: 0 0 0 2px var(--greenColor), 0 0 #f0fff0;
+  box-shadow: 0 0 0 2px var(--greenColor), 0 0 #c3dae0;
   transform: translate3d(0, 0, -1em);
 }
