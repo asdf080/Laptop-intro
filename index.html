@@ -268,29 +268,39 @@
           </div>
         </article>
       </section>
-      <a style="color: black" href="test.html">
-        <div id="goTestArea">
-          <div id="goTestAreaInner">
+
+      <div id="goTestArea">
+        <div id="goTestAreaInner">
+          <a style="color: black" href="test.html">
             <div id="goTestAreaTxt">
-              <p>어떤 노트북을 사야할까?</p>
+              <p>어떤 제품을 사야할까?</p>
               <h3>자신에게 딱 맞는 노트북을 알아보세요!</h3>
-              <button>
-                <p>자세히 보기</p>
-                <i class="fa-solid fa-angle-right"></i>
+              <button class="goTestBtn">
+                <p class="btnText">자세히 보기</p>
+                <div class="btnTwo">
+                  <p class="btnText2"><i class="fa-solid fa-angle-right"></i></p>
+                </div>
               </button>
             </div>
-            <img src="img/goTest1.png" alt="img" />
-          </div>
+          </a>
+          <img src="img/goTest2.png" alt="img" />
         </div>
-      </a>
+      </div>
       <section id="mapSect">
         <h2 class="secTit scroHidden scroTit">내 주변의 노트북 판매처, 어디 있을까?</h2>
         <h3 class="scroHidden scroTit">검색으로 알아보기</h3>
+        <ul id="shopList">
+          <li>삼성 스토어</li>
+          <li>LG전자 베스트샵</li>
+          <li>프리스비</li>
+          <li>하이마트</li>
+          <li>전자랜드</li>
+        </ul>
         <div class="map_wrap">
           <div id="menu_wrap" class="bg_white">
             <div class="option">
               <div>
-                <form onsubmit="searchPlaces(); return false;">
+                <form id="searchForm" onsubmit="searchPlaces(); return false;">
                   <div id="mapInputWrap">
                     <input type="text" value="대구 전자제품" id="keyword" size="15" />
                     <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>

@@ -404,7 +404,7 @@ section#popBrands article img {
 
 #goTestArea {
   width: 100%;
-  height: 250px;
+  height: 300px;
   background: #e3e3e3;
   margin-bottom: 70px;
   display: flex;
@@ -416,6 +416,8 @@ section#popBrands article img {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 20px;
+  margin-right: 10px;
 }
 
 #goTestArea #goTestAreaTxt p {
@@ -424,22 +426,51 @@ section#popBrands article img {
 #goTestArea #goTestAreaTxt h3 {
   font-size: 30px;
 }
-#goTestArea #goTestAreaTxt button {
-  cursor: pointer;
-  font-size: 17px;
-  margin-top: 20px;
-  padding: 5px;
-  border-radius: 30px;
-  border: 1px solid black;
-  background: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 175px;
-}
 
 #goTestArea #goTestAreaInner img {
-  width: 400px;
+  width: 500px;
+  display: none;
+}
+
+.goTestBtn {
+  background: none;
+  border: 1px solid black;
+  width: 175px;
+  height: 45px;
+  overflow: hidden;
+  text-align: center;
+  transition: 0.2s;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 17px;
+  margin-top: 20px;
+  padding: 5px 10px;
+  font-weight: 500;
+}
+
+.btnTwo {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  margin-top: -100px;
+  padding-top: 2px;
+  background: none;
+  left: -250px;
+  transition: 0.4s;
+}
+.btnText {
+  transition: 0.5s;
+}
+.btnText2 {
+  margin-top: 63px;
+  margin-right: -130px;
+  padding: 5px 0;
+}
+#goTestAreaTxt:hover .btnTwo {
+  left: -148px;
+}
+#goTestAreaTxt:hover .btnText {
+  margin-left: 30px;
 }
 
 /* 다섯번째 섹션 */
@@ -450,6 +481,36 @@ section#mapSect #map {
   background-color: #aaa;
   border-radius: 10px;
   margin: 0 auto;
+}
+
+#mapSect h3 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 60px;
+}
+
+section#mapSect ul#shopList {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+section#mapSect ul#shopList li {
+  cursor: pointer;
+  background: var(--ligthGreen);
+  border-radius: 30px;
+  padding: 7px 17px;
+  margin: 0 10px;
+  font-size: 20px;
+}
+
+section#mapSect ul#shopList li::before {
+  content: "# ";
+}
+
+section#mapSect ul#shopList li:hover {
+  transform: translateY(-5px);
+  font-weight: 500;
 }
 
 /* 탑버튼 */
@@ -584,6 +645,9 @@ footer .link li:hover:after {
   section {
     margin: 0 auto;
     padding: 80px 10px 160px 10px;
+  }
+  #goTestArea #goTestAreaInner img {
+    display: block;
   }
 }
 
