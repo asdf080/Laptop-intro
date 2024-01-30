@@ -48,13 +48,12 @@ darkBtn.addEventListener("click", () => {
   }
 });
 
-// 커서
+// 커서 효과
 let mouseCursor = document.querySelector(".cursor");
 let navBtm = document.querySelector("#navBtm");
 
-// #navBtm에 mousemove 이벤트 리스너 추가
 navBtm.addEventListener("mousemove", (e) => {
-  // #navBtm 영역의 좌표
+  // #navBtm 영역 좌표
   let rect = navBtm.getBoundingClientRect();
 
   // 커서가 #navBtm 영역 내에 있는지 확인
@@ -69,14 +68,14 @@ navBtm.addEventListener("mousemove", (e) => {
   }
 });
 
-// #navBtm에 li에 mouseover, mouseleave 이벤트 리스너 추가
-navBtm.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("mouseover", () => {
+navBtm.querySelectorAll("a").forEach((li) => {
+  li.addEventListener("mouseover", () => {
+    // 호버시 (라이트/다크 모드에 따라) 커서 크기 확장+z index 수정
     if (document.querySelector("#theme").checked) {
       mouseCursor.classList.add("cursor-growBlack");
     } else mouseCursor.classList.add("cursor-grow");
   });
-  link.addEventListener("mouseleave", () => {
+  li.addEventListener("mouseleave", () => {
     if (document.querySelector("#theme").checked) {
       mouseCursor.classList.remove("cursor-growBlack");
     } else mouseCursor.classList.remove("cursor-grow");
@@ -131,7 +130,7 @@ var swiper = new Swiper(".mySwiper", {
   loop: true,
 });
 
-// 브랜드 메뉴
+// 브랜드 토글 메뉴
 let BrdArticles = document.querySelectorAll("#popBrands article");
 
 function resetArt() {

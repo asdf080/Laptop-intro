@@ -182,8 +182,17 @@ function addResult(str) {
 
   document.body.insertAdjacentHTML("afterbegin", htmlContent);
 
-  document.querySelector("#reload").addEventListener("click", function () {
+  // 다시하기 버튼 효과 추가
+  let reload = document.querySelector("#reload");
+  reload.addEventListener("click", () => {
     location.reload();
+  });
+  reload.addEventListener("mouseover", () => {
+    document.querySelector(".fa-rotate").classList.add("fa-spin");
+  });
+
+  reload.addEventListener("mouseout", () => {
+    document.querySelector(".fa-rotate").classList.remove("fa-spin");
   });
 }
 

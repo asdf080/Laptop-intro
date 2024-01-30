@@ -22,6 +22,7 @@ body {
 button {
   cursor: pointer;
   background: none;
+  transition: all 0.2s;
 }
 
 section#main {

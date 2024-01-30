@@ -492,7 +492,8 @@ section#mapSect #map {
 section#mapSect ul#shopList {
   display: flex;
   justify-content: center;
-  margin-bottom: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
 }
 
 section#mapSect ul#shopList li {
@@ -500,7 +501,7 @@ section#mapSect ul#shopList li {
   background: var(--ligthGreen);
   border-radius: 30px;
   padding: 7px 17px;
-  margin: 0 10px;
+  margin: 10px;
   font-size: 20px;
 }
 
