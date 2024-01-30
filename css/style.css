@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   word-break: keep-all;
-  font-family: "IBMPlexSansKR-Regular";
+  font-family: "IBM Plex Sans KR", sans-serif;
   --greenColor: #244655;
   --greenColor2: #4f849b;
   --ligthGreen: #f0f4f3;
@@ -112,6 +112,7 @@ header nav#navBtm {
   align-items: center;
   gap: 40px;
   transition: none;
+  font-weight: 500;
 }
 
 header nav#navBtm a {
@@ -604,9 +605,4 @@ footer .link li:hover:after {
 @font-face {
   font-family: "SuseongDotum";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/SuseongDotum.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "IBMPlexSansKR-Regular";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff") format("woff");
 }
