@@ -425,6 +425,7 @@ section#popBrands article img {
   font-size: 30px;
 }
 #goTestArea #goTestAreaTxt button {
+  cursor: pointer;
   font-size: 17px;
   margin-top: 20px;
   padding: 5px;
@@ -435,6 +436,10 @@ section#popBrands article img {
   align-items: center;
   justify-content: space-evenly;
   width: 175px;
+}
+
+#goTestArea #goTestAreaInner img {
+  width: 400px;
 }
 
 /* 다섯번째 섹션 */
