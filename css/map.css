@@ -48,26 +48,13 @@
   border-bottom: none;
   margin: 3px 0;
 }
-#menu_wrap .option {
-  text-align: center;
-  margin-bottom: 20px;
-}
-#menu_wrap .option p {
-  margin: 10px 0;
-}
-
-#menu_wrap .option form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 #menu_wrap .option #mapInputWrap {
   border-radius: 30px;
   border: 2px solid var(--greenColor);
   display: flex;
-  align-items: center;
-  min-width: 280px;
+  width: 280px;
+  margin: 0 auto 20px;
 }
 
 #menu_wrap .option input {
@@ -97,7 +84,7 @@
 }
 
 #menu_wrap .option button i {
-  font-size: 30px;
+  font-size: 25px;
   color: var(--greenColor);
 }
 

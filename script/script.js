@@ -169,3 +169,18 @@ document.querySelector("#brdBtn4").addEventListener("click", () => {
   resetArt();
   showArt(document.querySelector("#brdArt4"));
 });
+
+// 중간 애니메이션
+const goTestArea = document.querySelector("#goTestArea");
+const lottie = document.querySelector("#goTestArea dotlottie-player");
+
+// goTestArea에 마우스를 올렸을 때
+goTestArea.addEventListener("mouseover", function () {
+  lottie.setAttribute("autoplay", "");
+  lottie.setAttribute("hover", "");
+});
+
+// goTestArea에서 마우스가 벗어났을 때
+goTestArea.addEventListener("mouseout", function () {
+  lottie.removeAttribute("autoplay");
+});

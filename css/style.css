@@ -279,10 +279,14 @@ section#popGoods article .goodsTxtWrap {
   transition: all 0.3s ease;
 }
 
-section#popGoods article .goodsTxtWrap div:first-child,
-section#popGoods article .goodsTxtWrap div:last-child {
+section#popGoods article .goodsTxtWrap div:first-child {
   font-size: 22px;
-  font-weight: bold;
+  font-weight: 700;
+}
+
+section#popGoods article .goodsTxtWrap div:last-child {
+  font-size: 20px;
+  font-weight: 500;
 }
 
 /* 네번째 섹션 */
@@ -396,6 +400,41 @@ section#popBrands article#brdArt1 {
 section#popBrands article img {
   width: 90%;
   border-radius: 10px;
+}
+
+#goTestArea {
+  width: 100%;
+  height: 250px;
+  background: #e3e3e3;
+  margin-bottom: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#goTestArea #goTestAreaInner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#goTestArea #goTestAreaTxt p {
+  font-size: 20px;
+}
+#goTestArea #goTestAreaTxt h3 {
+  font-size: 30px;
+}
+#goTestArea #goTestAreaTxt button {
+  font-size: 17px;
+  margin-top: 20px;
+  padding: 5px;
+  border-radius: 30px;
+  border: 1px solid black;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 175px;
 }
 
 /* 다섯번째 섹션 */
