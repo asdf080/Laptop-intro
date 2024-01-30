@@ -171,9 +171,4 @@ document.querySelector("#brdBtn4").addEventListener("click", () => {
 });
 
 // 이미지 랜덤 선택
-function one_Two() {
-  return Math.random() < 0.5 ? 1 : 2;
-}
-
-var result = one_Two();
-document.querySelector("#goTestArea img").src = `img/goTest${one_Two()}.png`;
+document.querySelector("#goTestArea img").src = `img/goTest${Math.random() < 0.5 ? 1 : 2}.png`;

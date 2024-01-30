@@ -12,8 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
     lottiePlayer.setAttribute("src", "https://lottie.host/7f095fb7-93b3-43d8-ae32-25f708d3fe14/oMXFvBbato.json");
     lottiePlayer.setAttribute("background", "transparent");
     lottiePlayer.setAttribute("speed", "1.2");
-    lottiePlayer.style.width = "500px";
-    lottiePlayer.style.height = "500px";
+    lottiePlayer.style.width = "450px";
+    lottiePlayer.style.height = "450px";
     lottiePlayer.setAttribute("direction", "1");
     lottiePlayer.setAttribute("playMode", "normal");
     lottiePlayer.setAttribute("loop", "");
@@ -25,11 +25,23 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 // 여기까지 로티 애니메이션
 
-document.querySelector("#Btn1").addEventListener("click", () => btnClick("Btn1"));
+// 메인태그 삭제시 스크롤 가능
+var observerCallback = function (mutationsList, observer) {
+  for (var mutation of mutationsList) {
+    if (mutation.type === "childList") {
+      if (document.querySelector("#main")) {
+        document.body.style.overflowY = "hidden";
+      } else {
+        document.body.style.overflowY = "";
+      }
+    }
+  }
+};
+var observer = new MutationObserver(observerCallback);
+var config = { attributes: false, childList: true, subtree: true };
+observer.observe(document.body, config);
 
-if (document.querySelector("#main")) {
-  document.body.style.overflowY = "hidden";
-}
+document.querySelector("#Btn1").addEventListener("click", () => btnClick("Btn1"));
 
 const Wrap1 = document.querySelector(".qnaWrap1");
 // 메인화면 버튼
@@ -108,7 +120,7 @@ function addQna(num, tit, cont1, cont2, id1, id2) {
         <div class="qTitle">
           <h3>${tit}</h3>
         </div>
-        <img src="img/qna${num}.webp" alt="사용자이미지">
+        <img src="img/qna${num}.png" alt="사용자이미지">
       </div>
       <div class="qnaRi">
         <div class="qnaAWrap">

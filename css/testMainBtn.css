@@ -47,3 +47,9 @@ section#main button:active::before {
   box-shadow: 0 0 0 2px var(--greenColor), 0 0 #c3dae0;
   transform: translate3d(0, 0, -1em);
 }
+
+@media screen and (max-width: 680px) {
+  section#main button {
+    padding: 15px 20px;
+  }
+}

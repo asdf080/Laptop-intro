@@ -95,6 +95,7 @@ section#qna .qnaWrap .qnaLe .qTitle {
 section#qna .qnaWrap .qnaLe img {
   width: 70%;
   max-width: 330px;
+  margin: 60px 0;
 }
 
 section#qna .qnaWrap .qnaRi {
@@ -302,6 +303,37 @@ section#result .resultWrapInner img {
 
   section#qna .qnaWrap .qnaRi button {
     margin-top: 20px;
+  }
+
+  section#qna .qnaWrap .qnaLe img {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  section#main h1 {
+    color: var(--greenColor);
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  section#qna .qnaWrap,
+  section#result .resultWrap {
+    padding: 20px;
+  }
+
+  section#qna .qnaWrap .qnaLe .qTitle {
+    min-width: none;
+    min-height: none;
+    width: 90%;
+    font-size: 25px;
+    color: var(--greenColor);
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .goHome {
+    display: none;
   }
 }
 
