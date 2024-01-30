@@ -14,9 +14,7 @@
     <script src="https://kit.fontawesome.com/2cb2c6d57e.js" crossorigin="anonymous"></script>
   </head>
   <!-- 지도 input창 안에 버튼 넣기 -->
-  <!-- nav 야간모드 적용 -->
   <!-- 지도 밑에 노트북 찾기 버튼(디자인 생각하기) -->
-  <!-- 지도 마커 확인 -->
   <!-- 색맹 에뮬레이션: 흐릿한 시야, 대비감소 확인 -->
   <body>
     <header>
@@ -277,8 +275,10 @@
             <div class="option">
               <div>
                 <form onsubmit="searchPlaces(); return false;">
-                  <input type="text" value="대구 전자제품" id="keyword" size="15" />
-                  <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                  <div id="mapInputWrap">
+                    <input type="text" value="대구 전자제품" id="keyword" size="15" />
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                  </div>
                 </form>
               </div>
             </div>

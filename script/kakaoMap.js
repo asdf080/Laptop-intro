@@ -199,3 +199,26 @@ function removeAllChildNods(el) {
     el.removeChild(el.lastChild);
   }
 }
+
+const mapInputWrap = document.querySelector("#mapInputWrap");
+const input = document.querySelector(".option input");
+
+// 호버 상태 감지
+input.addEventListener("mouseover", () => {
+  mapInputWrap.classList.add("inputShadow");
+});
+
+input.addEventListener("mouseout", () => {
+  if (!input.matches(":focus")) {
+    mapInputWrap.classList.remove("inputShadow");
+  }
+});
+
+// 포커스 상태 감지
+input.addEventListener("focus", () => {
+  mapInputWrap.classList.add("inputShadow");
+});
+
+input.addEventListener("blur", () => {
+  mapInputWrap.classList.remove("inputShadow");
+});

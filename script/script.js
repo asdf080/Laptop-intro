@@ -2,6 +2,7 @@
 const greenColor = "#244655";
 const lightGreen = "#c6ded8";
 const mintLeaf = "#7bcb7b";
+const navWhite = "#f9f9f9";
 
 const darkBtn = document.querySelector("#theme");
 darkBtn.addEventListener("click", () => {
@@ -9,12 +10,19 @@ darkBtn.addEventListener("click", () => {
     for (let a of document.querySelectorAll(".bubbleApos, body")) {
       a.style.background = "#111";
     }
+    document.querySelector("#navBtm").style.background = greenColor;
+    for (let a of document.querySelectorAll("#navBtm a, #navBtm i")) {
+      a.style.color = navWhite;
+    }
+    for (let a of document.querySelectorAll("#navBtm a")) {
+      a.classList.add("darkHover");
+    }
     document.querySelector(".headWrap").classList.add("darkBg");
     document.querySelector("#titWrap").style.color = "#f0f4f3";
     for (let a of document.querySelectorAll(".btnTxt, #popBrands a")) {
       a.style.color = lightGreen;
     }
-    for (let a of document.querySelectorAll("section h3, .goodsTxtWrap, #togBrandWrap button, #popBrands article")) {
+    for (let a of document.querySelectorAll("section h3, .goodsTxtWrap, #togBrandWrap button, #popBrands article, #navBtmTxt p, #navBtmTxt div")) {
       a.style.color = "white";
     }
     for (let a of document.querySelectorAll(".secTit")) {
@@ -24,11 +32,14 @@ darkBtn.addEventListener("click", () => {
       a.style.border = "2px solid gray";
     }
   } else {
-    for (let a of document.querySelectorAll("body, .bubbleApos")) {
+    for (let a of document.querySelectorAll("body, .bubbleApos, #navBtm")) {
       a.style.background = "";
     }
-    for (let a of document.querySelectorAll("#titWrap, .btnTxt, .secTit, section h3, #popBrands a, .goodsTxtWrap, #togBrandWrap button, #popBrands article")) {
+    for (let a of document.querySelectorAll("#titWrap, .btnTxt, .secTit, section h3, #popBrands a, .goodsTxtWrap, #togBrandWrap button, #popBrands article, #navBtm *, #navBtmTxt p, #navBtmTxt div")) {
       a.style.color = "";
+    }
+    for (let a of document.querySelectorAll("#navBtm a")) {
+      a.classList.remove("darkHover");
     }
     document.querySelector(".headWrap").classList.remove("darkBg");
     for (let a of document.querySelectorAll("#popGoods li")) {
@@ -61,10 +72,14 @@ navBtm.addEventListener("mousemove", (e) => {
 // #navBtm에 li에 mouseover, mouseleave 이벤트 리스너 추가
 navBtm.querySelectorAll("a").forEach((link) => {
   link.addEventListener("mouseover", () => {
-    mouseCursor.classList.add("cursor-grow");
+    if (document.querySelector("#theme").checked) {
+      mouseCursor.classList.add("cursor-growBlack");
+    } else mouseCursor.classList.add("cursor-grow");
   });
   link.addEventListener("mouseleave", () => {
-    mouseCursor.classList.remove("cursor-grow");
+    if (document.querySelector("#theme").checked) {
+      mouseCursor.classList.remove("cursor-growBlack");
+    } else mouseCursor.classList.remove("cursor-grow");
   });
 });
 

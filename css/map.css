@@ -56,30 +56,40 @@
   margin: 10px 0;
 }
 
-#menu_wrap .option div form {
+#menu_wrap .option form {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#menu_wrap .option input {
-  font-size: 18px;
-  width: 75%;
-  padding: 10px 20px;
+#menu_wrap .option #mapInputWrap {
   border-radius: 30px;
   border: 2px solid var(--greenColor);
-  transition: all 0s;
+  display: flex;
+  align-items: center;
+  min-width: 280px;
 }
 
-#menu_wrap .option input:hover,
+#menu_wrap .option input {
+  font-size: 18px;
+  width: 80%;
+  padding: 5px 5px 5px 23px;
+  transition: none;
+  border: none;
+  background: none;
+}
+
 #menu_wrap .option input:focus {
   outline: none;
+}
+
+.inputShadow {
   box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.2);
+  background: var(--ligthGreen);
 }
 
 #menu_wrap .option button {
   cursor: pointer;
-  margin-left: 5px;
   background: none;
   border: none;
   border-radius: 100%;
