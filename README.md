@@ -22,7 +22,7 @@ https://asdf080.github.io/Laptop-intro/
 
 ### ✔ 미리보기
 - 메인 페이지
-![preview](./imag/preview1.png)
+![preview](./imag/preview1.jpg)
 
 - 서브 페이지
-![preview](./imag/preview2.png)
+![preview](./imag/preview2.jpg)
