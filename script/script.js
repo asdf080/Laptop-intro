@@ -19,10 +19,11 @@ darkBtn.addEventListener("click", () => {
     }
     document.querySelector(".headWrap").classList.add("darkBg");
     document.querySelector("#titWrap").style.color = "#f0f4f3";
+    document.querySelector("#goTestArea").style.background = "#777";
     for (let a of document.querySelectorAll(".btnTxt, #popBrands a")) {
       a.style.color = lightGreen;
     }
-    for (let a of document.querySelectorAll("section h3, .goodsTxtWrap, #togBrandWrap button, #popBrands article, #navBtmTxt p, #navBtmTxt div")) {
+    for (let a of document.querySelectorAll("section h3, .goodsTxtWrap, #togBrandWrap button, #popBrands article, #navBtmTxt p, #navBtmTxt div, #goTestArea *")) {
       a.style.color = "white";
     }
     for (let a of document.querySelectorAll(".secTit")) {
@@ -32,10 +33,10 @@ darkBtn.addEventListener("click", () => {
       a.style.border = "2px solid gray";
     }
   } else {
-    for (let a of document.querySelectorAll("body, .bubbleApos, #navBtm")) {
+    for (let a of document.querySelectorAll("body, .bubbleApos, #navBtm, #goTestArea")) {
       a.style.background = "";
     }
-    for (let a of document.querySelectorAll("#titWrap, .btnTxt, .secTit, section h3, #popBrands a, .goodsTxtWrap, #togBrandWrap button, #popBrands article, #navBtm *, #navBtmTxt p, #navBtmTxt div")) {
+    for (let a of document.querySelectorAll("#titWrap, .btnTxt, .secTit, section h3, #popBrands a, .goodsTxtWrap, #togBrandWrap button, #popBrands article, #navBtm *, #navBtmTxt p, #navBtmTxt div, #goTestArea *")) {
       a.style.color = "";
     }
     for (let a of document.querySelectorAll("#navBtm a")) {

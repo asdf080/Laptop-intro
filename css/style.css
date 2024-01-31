@@ -261,11 +261,11 @@ section#popGoods article ul li {
 }
 
 section#popGoods article li:hover img {
-  transform: scale(0.9);
+  transform: scale(0.92);
 }
 
 section#popGoods article li:hover .goodsTxtWrap {
-  transform: scale(1.1);
+  transform: scale(1.07);
 }
 
 section#popGoods article img {
@@ -368,6 +368,10 @@ section#popBrands article#brdArt1 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#goTestArea * {
+  color: black;
 }
 
 #goTestArea #goTestAreaInner {
