@@ -24,5 +24,6 @@ https://asdf080.github.io/Laptop-intro/
 - 메인 페이지
 ![preview](./img/preview1.jpg)
 
+
 - 서브 페이지
 ![preview](./img/preview3.jpg)
