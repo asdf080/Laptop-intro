@@ -15,10 +15,12 @@ https://asdf080.github.io/Laptop-intro/
 - JavaScript
 
 ### 🎈주요 기능
+- 모든 디스플레이 크기를 지원하는 반응형 디자인
 - 다크 모드/라이트 모드 토글 버튼
 - 많은 정보를 한눈에 볼 수 있는 캐러셀 슬라이드와 토글 메뉴
 - getBoundingClientRect를 활용한 스크롤 연동 CSS 애니메이션
 - 오픈 API를 활용한 카카오맵 서비스
+- 심리테스트 사이트를 오마주한 노트북 찾기 서브 페이지
 
 ### 📏와이어 프레임
 [Figma 링크](https://www.figma.com/file/KbxjzItSk3V23GCEuK1Awu/Laptop-wireframe?type=design&node-id=0-1&mode=design&t=qxcW5hrLb26OP4vM-0)
