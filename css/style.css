@@ -74,6 +74,7 @@ header div.headWrap #titWrap {
 header div.headWrap #titWrap h1 {
   font-family: "SuseongDotum";
   transition: transform 1.2s;
+  will-change: transform;
 }
 
 .cursor {
