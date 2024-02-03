@@ -285,3 +285,29 @@ resultObj.C1a = resultObj.A1a;
 resultObj.C1b = resultObj.A1b;
 resultObj.C2a = resultObj.A2a;
 resultObj.C2b = resultObj.A2b;
+
+console.log(`
+      ROCKET SCIENCE
+
+            ##
+           #  #
+          #    #
+         #      #
+        #   ##   #
+       #  #    #  #
+       #  #    #   #
+     ##     ##     ##
+    # #            # #
+   #  #            #  #
+  #   #            #   #
+ #    #            #    #
+ #  # #            # #  #
+ # #   #          #   # #
+ #      # # # # ##      #
+
+         #      #
+          #    #
+           #  #
+            ##
+
+`)
